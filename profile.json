@@ -1,0 +1,336 @@
+{
+  "$schema_note": "Information dump for a coding agent building thomasblalock.com. Treat as source-of-truth content; the agent has full creative latitude on layout, copy polish, and visual design within the directives in `site_direction`.",
+
+  "site_direction": {
+    "primary_audience": "General public / networking — recruiters, founders, collaborators, and curious internet visitors who land here from LinkedIn, X, or word of mouth. Not a job-application portfolio and not an investor deck — a public identity.",
+    "centerpiece": "Current ventures: Agent Service Index and Sidequest Local. The first thing a visitor should understand is what Thomas is building right now. Everything else (research, awards, military background) is supporting evidence that he's qualified to build it.",
+    "tone": "Infer from the project information and ask the user. Avoid buzwords. Be content dense. Be organized and concise. Imbue the website with personality in the design of the layout and JS gimicks.",
+    "design_direction": "Distinctive — not a generic devfolio template. The agent should feel free to use a strong opinionated visual identity: bold typography, unconventional layout, asymmetry, a memorable color palette. Avoid: gradient hero blobs, glassmorphism cards, generic 3-column 'Featured Projects' grids, AI-generated-looking abstract art. The site should be memorable enough that someone could describe it from memory after one visit.",
+  },
+
+  "person": {
+    "name": "Thomas M. Blalock",
+    "preferred_first_name": "Thomas",
+    "location": "Charlottesville, VA",
+    "current_status": [
+      "US Air Force Operations Research Analyst",
+      "MS Data Science candidate at the University of Virginia (graduating 2026)",
+      "Founder of Agent Service Index",
+      "Founder of Sidequest Local"
+    ],
+    "short_bio": "Thomas is an Air Force Operations Research Analyst and the founder of Agent Service Index (infrastructure for the agent economy) and Sidequest Local (a social app for spontaneous local meetups). He graduated #1 in the Computer Science department at the US Air Force Academy and is finishing an MS in Data Science at UVA. His research has spanned brain-computer interfaces, reinforcement learning for military logistics, agentic malware, and NATO space deterrence policy.",
+    "long_bio": "Thomas grew up doing concurrent college enrollment in high school, spent a year at New Mexico Military Institute as valedictorian, then four years at the US Air Force Academy double-majoring in Computer Science and Data Science. He graduated in 2025 with a 3.967 GPA (#9 of 938), perfect 4.0s in both his majors, and the Outstanding Cadet in Computer Science award (#1 of 39 CS majors in the class). Along the way he commanded a 110-cadet squadron, led a 29-person NATO space policy research team, and won the #1 USAFA engineering research project award twice — once as a junior for an ontology-informed NLP model built with the NSA, and once again the next summer for Flexible Input Networks, a formalization of a class of neural architectures he designed at QC Ware for an Air Force Research Lab logistics problem. He is now an Operations Research Analyst in the Air Force, completing an MS in Data Science at UVA, and building startups on the side."
+  },
+
+  "contact": {
+    "email": "blalockthomasm@gmail.com",
+    "github": "https://github.com/ThomasBlalock",
+    "linkedin": "https://www.linkedin.com/in/thomas-blalock/",
+    "personal_site": "thomasblalock.com (presumed — this site)"
+  },
+
+  "ventures": [
+    {
+      "name": "Agent Service Index",
+      "short_name": "ASI",
+      "tagline": "The discovery layer for the agent economy.",
+      "url": "https://agentserviceindex.com",
+      "role": "Founder",
+      "started": "May 2026",
+      "status": "Live",
+      "elevator_pitch": "An open registry where AI agents discover, authenticate to, and pay for services without API keys, dashboards, or human-in-the-loop signups. One natural-language search endpoint; agents find what they need and use it. Onboarding is a single prompt.",
+      "what_it_does": "ASI is a public directory and discovery layer connecting autonomous AI agents to permissionless, agent-friendly services. Agents POST natural-language queries (e.g., 'cloud hosting') and get back callable services — no manual signup required.",
+      "live_services": [
+        "Cloud hosting (cloud-as): permissionless EC2 instance management with free and paid tiers",
+        "Subdomain & CDN: automated DNS binding and Cloudflare Tunnel provisioning so agents can put a site on the open internet",
+        "Payment processing: x402 v2 facilitator for USDC transfers on Base, EIP-3009 compliant"
+      ],
+      "why_it_matters": "Agents today can't really transact. They hit signup walls, captchas, and OAuth flows designed for humans. ASI is infrastructure for the moment when that stops being acceptable.",
+      "tech": [
+        "MCP (Model Context Protocol) server architecture",
+        "USDC on Base for payments",
+        "EIP-3009 for crypto transactions"
+      ],
+      "tagline_alts": [
+        "Infrastructure for agents.",
+        "An open registry of services agents can actually use.",
+        "Where AI agents go shopping."
+      ]
+    },
+    {
+      "name": "Sidequest Local",
+      "short_name": "Sidequest",
+      "tagline": "For when your friends are busy, but you're not.",
+      "url": "https://sidequestlocal.com",
+      "role": "Founder",
+      "started": "December 2025",
+      "status": "Live",
+      "elevator_pitch": "A mobile social discovery app for spontaneous local meetups. See what small groups of people near you are doing right now — coffee, climbing, board games, whatever — and join with one tap. Post a plan in 30 seconds. No groupchat coordination required.",
+      "what_it_does": "Real-time live feed of small social activities happening near you. Quick post, one-tap join, low-pressure participation.",
+      "the_problem": "You have a free afternoon. You text 10 group chats. Six don't reply, three are busy, one says 'maybe later.' You stay home. Sidequest replaces that whole loop with a feed.",
+      "company": {
+        "legal_name": "Sidequest Local, Inc.",
+        "location": "Charlottesville, VA",
+        "founded": "2026"
+      },
+      "target_users": "People with free time and no immediate plans; anyone whose regular friend group is unavailable; folks who want spontaneous social experiences without coordination overhead."
+    }
+  ],
+
+  "research": [
+    {
+      "name": "Flexible Input Networks (FINs)",
+      "dates": "Jun 2024 – Dec 2024 (extended through 2025)",
+      "affiliations": ["Air Force Research Laboratory", "QC Ware Corp.", "US Air Force Academy"],
+      "role": "Individual researcher",
+      "award": "#1 USAFA Computer Science Research Project of Summer 2024",
+      "summary": "Designed a novel class of neural architectures called Flexible Input Networks that can learn across multi-modal variability — handling dynamically sized 'set of sets' inputs without pre-decoder aggregation, recurrence, or autoregression. Used FINs to build the first reinforcement learning solution to the Airlift Logistics Challenge (a complex Pickup and Delivery Problem instance formulated by AFRL), outputting a dynamic number of actions without iteration.",
+      "presented_at": "CORONA 2024 — to Air Force leadership including the Secretary of the Air Force and Chief of Staff of the Air Force",
+      "github": "https://github.com/ThomasBlalock/FINs_Airlift_Challenge"
+    },
+    {
+      "name": "Informed Machine Learning",
+      "dates": "May 2023 – Aug 2023",
+      "affiliations": ["National Security Administration Mathematics Research Group", "US Air Force Academy"],
+      "role": "Team of 4",
+      "award": "#1 USAFA Junior Engineering Research Project of Summer 2023 (Second Class CSRP Award, Engineering Division)",
+      "summary": "Designed, built, and tested an attention-based autoencoder ML model 'informed' by an ontology — integrating a knowledge base curated by subject matter experts into a pre-trained LLM's encoder to reduce hallucination on scientifically nuanced documents. The modified encoder performed better on semantic extraction, suggesting that informed architectures can improve LLM accuracy more efficiently than simply scaling up.",
+      "presented_at": "The Director of the NSA; CORONA 2023 to the Secretary of the Air Force and Chief of Staff of the Air Force"
+    },
+    {
+      "name": "NATO Alliance Space Deterrence",
+      "dates": "Aug 2022 – May 2023",
+      "affiliations": ["US Air Force Academy", "NATO Science & Technology Organization"],
+      "role": "Led research team of 29 students",
+      "summary": "After Russia's kinetic anti-satellite test in 2021, NATO commissioned a comprehensive space deterrence framework spanning diplomatic, informational, military, and economic instruments. Thomas led a 29-cadet team developing policy suggestions and frameworks for use by national and NATO authorities to ensure continued access to space.",
+      "presented_at": [
+        "NATO's inaugural space deterrence wargame in Paris, France — 13 member nations represented",
+        "Western Regional Honors Conference 2023",
+        "USSPACECOM Space Law Conference 2023"
+      ],
+      "media": "https://www.youtube.com/watch?v=XWKQtF9r9Ok"
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "Automated Conversational Hijacking",
+      "dates": "Aug 2024 – May 2025",
+      "affiliation": "US Air Force Academy Center for Cyberspace Research",
+      "role": "Team of 3",
+      "summary": "Proof-of-concept agentic malware that infiltrates an email account and sends spear-phishing messages on pre-existing threads — using an LLM to generate contextually-relevant content that reads like it's actually from the victim. A demonstration of where the social-engineering threat surface is going now that agents can read context and write convincingly.",
+      "tone_note": "Lean into this. 'I built malware that phishes your friends' is a great story."
+    },
+    {
+      "name": "Brain-Computer Interface P300 Speller",
+      "dates": "Aug 2023 – Feb 2024",
+      "affiliation": "US Air Force Academy Center for Cyberspace Research",
+      "role": "Individual",
+      "summary": "Full-pipeline EEG-based brain-computer interface for spelling — typing using brain activity alone. Built the EEG helmet hardware, the P300 stimulus GUI, the data collection pipeline, and a recurrent CNN classifier that translates raw brainwave readings into characters. Primary use case is communication for people with severe motor disabilities.",
+      "github": "https://github.com/ThomasBlalock/P300_BCI_Speller"
+    },
+    {
+      "name": "Autonomous Rover",
+      "dates": "Jan 2024 – Mar 2024",
+      "affiliation": "US Air Force Academy Center for Cyberspace Research",
+      "role": "Individual",
+      "summary": "Computer-vision-based autonomous rover trained first with behavioral cloning, then with reinforcement learning using an actor-critic architecture and heavy reward engineering. Won a competitive race against other student teams on an unknown track.",
+      "github": "https://github.com/ThomasBlalock/Autonomous_Rover"
+    },
+    {
+      "name": "Facial Recognition Similarity Query System",
+      "dates": "Mar 2023 – May 2023",
+      "affiliations": ["US Air Force Academy", "Rose-Hulman Institute of Technology"],
+      "role": "Team of 4",
+      "summary": "Similarity query system that retrieves all images containing a specific person from a 40,000+ sports photo database, given a single reference image. Uses vector database search and a transfer-learned CNN fine-tuned with a triplet loss function. Research-only — never deployed.",
+      "github": "https://github.com/ThomasBlalock/Image_Guyver__Facial_Recognition"
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "University of Virginia",
+      "degree": "MS Data Science",
+      "dates": "2025 – 2026 (expected)",
+      "notes": "GPA 4.0"
+    },
+    {
+      "institution": "United States Air Force Academy",
+      "degree": "BS Data Science, BS Computer Science, Minor in High Performance Computing",
+      "dates": "2021 – 2025",
+      "gpa": {
+        "overall": "3.967 (#9 of 938)",
+        "data_science": "4.0 (#1 of 21)",
+        "computer_science": "4.0 (#1 of 39)"
+      },
+      "notable": "Outstanding Cadet in Computer Science — graduated #1 in the CS department as selected whollistically by the department staff."
+    },
+    {
+      "institution": "New Mexico Military Institute",
+      "degree": "Associate of Science",
+      "dates": "2020 – 2021",
+      "gpa": "4.0",
+      "notable": "Valedictorian; Falcon Scholarship recipient."
+    },
+    {
+      "institution": "University of Central Oklahoma",
+      "degree": "Concurrent enrollment during high school",
+      "dates": "2018 – 2020",
+      "gpa": "4.0"
+    }
+  ],
+
+  "awards": [
+    {
+      "name": "Outstanding Cadet in Computer Science",
+      "year": "2025",
+      "issuer": "USAF Academy Department of Computer Science",
+      "description": "Awarded to the #1 computer science student in the graduating class of 2025 as determined wholistically rather than just by GPA."
+    },
+    {
+      "name": "National Reconnaissance Office Advanced Academic Degree (Top 3)",
+      "year": "2025",
+      "issuer": "National Reconnaissance Office",
+      "description": "Competitive scholarship for an MS in Data Science at UVA and a follow-on slot at the NRO."
+    },
+    {
+      "name": "Engineering Division Junior Year CSRP Award",
+      "year": "2023",
+      "issuer": "US Air Force Academy",
+      "description": "#1 research project out of ~70 in the engineering division's Cadet Summer Research Program. Awarded for Informed Machine Learning."
+    },
+    {
+      "name": "Barry Goldwater Scholarship Finalist",
+      "year": "2023 or 2024",
+      "issuer": "Barry Goldwater Scholarship Foundation (USAFA nomination)",
+      "description": "Won the Air Force Academy's nomination for the national Goldwater Scholarship. Did not get the scholarship in finals."
+    },
+    {
+      "name": "Wing Fourth Class Cadet Competition Award",
+      "year": "2021 (Fall semester)",
+      "issuer": "United States Air Force Academy",
+      "description": "#1 USAFA freshman out of 1,078 selected wholistically by USAFA leadership for leadership aptitude, initiative, performance, and embodiment of USAFA ideals."
+    },
+    {
+      "name": "Group 2 Cadet of the Month",
+      "year": "August 2022",
+      "issuer": "USAFA Cadet Wing Group 2",
+      "description": "Monthly award to one cadet per class year in Group 2 (~1,100 cadets) for leadership aptitude, initiative, performance, and embodiment of USAFA ideals."
+    },
+    {
+      "name": "Best Exemplifies the Space Force Core Values",
+      "year": "June 2022",
+      "issuer": "USAFA/Azimuth",
+      "description": "Awarded to rising 3rd class cadets in the Azimuth program who best exemplified character, connection, commitment, and courage."
+    },
+    {
+      "name": "Junior Collage Valedictorian",
+      "year": "May 2021",
+      "issuer": "New Mexico Military Institute"
+    },
+    {
+      "name": "Falcon Scholarship",
+      "year": "July 2020",
+      "issuer": "Falcon Foundation"
+    }
+  ],
+
+  "leadership": [
+    {
+      "role": "Squadron Commander",
+      "year": "2025",
+      "scope": "Commanded a 110-cadet unit, managing across all USAFA cadet wing operations and mission sets."
+    },
+    {
+      "role": "Wing Academics Non-Commissioned Officer In Charge",
+      "year": "2023",
+      "scope": "Managed a staff of ~130 administering academics for 4,000+ cadets."
+    },
+    {
+      "role": "Cadet Space Operations Squadron Executive",
+      "year": "2022 – 2023",
+      "scope": "Led a 14-cadet instructor team teaching space operations to ~35 students."
+    },
+    {
+      "role": "USAFA Data Competition Team — Cadet in Charge (Founder)",
+      "year": "2022 – 2023",
+      "scope": "Founded the team with 8 members."
+    },
+    {
+      "role": "Science of Learning Team — Outreach Director",
+      "year": "2022 – 2023",
+      "scope": "Led an 8-cadet team producing educational content for 4,000+ cadets."
+    },
+    {
+      "role": "Wall Street Warfighters — Cadet in Charge (Founder)",
+      "year": "2022 – 2023",
+      "scope": "Founded the personal finance club; grew it into the largest club at USAFA."
+    },
+    {
+      "role": "Alpha Troop Commander",
+      "year": "2021",
+      "scope": "Commanded a unit of 107 cadets through a 24/7 schedule."
+    },
+    {
+      "role": "Founder, Blalock Enterprises, LLC",
+      "year": "2020",
+      "scope": "Custom design-to-print online merchandise LLC. Earned a 126% return on equity over 1 year."
+    }
+  ],
+
+  "skills_and_interests": {
+    "primary_technical": [
+      "Machine learning (deep learning, RL, NLP, computer vision)",
+      "Neural architecture design",
+      "Agentic systems and AI agent infrastructure",
+      "MCP servers / agent tool integration",
+      "Operations research",
+      "Python, Jupyter",
+      "High-performance computing"
+    ],
+    "domains_worked_in": [
+      "Military logistics (Airlift Challenge / PDP)",
+      "Brain-computer interfaces (EEG / P300)",
+      "Robotics (autonomous navigation, behavioral cloning, RL)",
+      "Computer vision (facial recognition, similarity search)",
+      "NLP / informed ML",
+      "Cybersecurity (offensive — agentic malware proof of concept)",
+      "Space policy / deterrence",
+      "Cryptocurrency (USDC, Base, EIP-3009)",
+      "Cloud infrastructure (AWS, Cloudflare)"
+    ],
+    "themes_to_surface": [
+      "Range — Thomas works across hardware (EEG, rovers), policy (NATO), infrastructure (ASI), and consumer (Sidequest). Don't pigeonhole him as 'an ML guy.'",
+      "Unusual combinations — Air Force officer building agent infrastructure; #1 CS student building a casual social app; cybersecurity researcher who writes malware as proof-of-concept.",
+      "Action bias — he founds things (LLC at 17, two clubs at USAFA, two companies now)."
+    ]
+  },
+
+  "fun_facts_and_color": [
+    "Started taking college classes in high school.",
+    "Ran a custom-merch print LLC in high school and pulled 126% ROE.",
+    "Presented to the Secretary of the Air Force and Secretary of War — twice, in two different summers.",
+    "Built EEG hardware from scratch as a side project.",
+    "Won a rover race against other cadets using a self-trained RL model.",
+    "Designed and built (research) malware that spear-phishes your contacts from your own preexisting email threads.",
+    "Currently building two companies that have approximately nothing to do with each other — one for AI agents, one for humans who want to leave the house."
+  ],
+
+  "what_to_avoid_in_copy": [
+    "Buzzword soup ('synergy,' 'leverage,' 'cutting-edge,' 'passionate about')",
+    "Treating the military background as the only interesting thing",
+    "Treating the military background as a thing to hide — it's a real part of the story",
+    "Generic 'AI engineer' framing — Thomas works on agents and infrastructure specifically, not GPT wrappers",
+    "Listing GPAs and ranks in the hero — those belong in a Background section, not the front door",
+    "Using the word 'innovative' anywhere"
+  ],
+
+  "open_questions_for_thomas_to_fill_in_later": [
+    "A 'now' paragraph he can update monthly — what's he working on this week?",
+    "A modular 'Essays' section that dynamically pulls markdown files from a directory so he can update his ideas in blogs.",
+    "Hobbies / non-work interests (running? climbing? reading? music? — not yet captured)",
+    "Talks, podcasts, or writing he's published (none currently surfaced)",
+    "Photos / headshot for the hero",
+    "Any preferred social handles beyond GitHub and LinkedIn (X / Bluesky / personal blog)"
+  ]
+}
