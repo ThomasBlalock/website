@@ -1,0 +1,195 @@
+/* ============================================================
+   thomasblalock.com — shared design language
+   --------------------------------------------------------------
+   This file is the only source of truth for global design tokens
+   and the layout primitives every tab inherits. Each component
+   may add its own scoped CSS but must NOT redefine these tokens.
+   ============================================================ */
+
+/* --- design tokens -------------------------------------------- */
+:root {
+  --bg:           #f7f4ee;   /* page background — warm off-white */
+  --paper:        #fdfbf6;   /* card / panel background */
+  --ink:          #16110b;   /* primary text */
+  --ink-soft:     #4a4339;   /* secondary text */
+  --muted:        #8a8175;   /* metadata, dates, eyebrows */
+  --rule:         #d8d1c2;   /* hairlines */
+  --accent:       #b3331f;   /* single accent — terra red */
+  --accent-soft:  #f3dcd5;   /* badge backgrounds */
+
+  --serif: "Fraunces", "Iowan Old Style", "Source Serif Pro", Georgia, serif;
+  --sans:  "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --mono:  "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --container: 1080px;        /* max content width */
+  --pad-x: 40px;              /* horizontal page padding */
+  --pad-y: 80px;              /* vertical page padding */
+}
+
+/* --- reset / base --------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* prose primitives every tab inherits */
+h1, h2, h3, h4 { font-family: var(--serif); letter-spacing: -0.02em; }
+h1 { font-weight: 900; font-variation-settings: "SOFT" 30, "opsz" 144; }
+h2 { font-weight: 700; }
+h3 { font-weight: 600; letter-spacing: -0.01em; }
+p  { margin: 0 0 12px; }
+
+a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.12s ease;
+}
+a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+/* --- global shell: top nav (renders into #site-nav) ----------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 18px var(--pad-x);
+  background: rgba(247, 244, 238, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+.topbar .brand {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.topbar nav {
+  display: flex;
+  gap: 26px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+}
+.topbar nav a {
+  text-decoration: none;
+  color: var(--muted);
+  text-transform: lowercase;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+.topbar nav a:hover { color: var(--accent); }
+.topbar nav a.active {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+/* --- page container ------------------------------------------- */
+.page {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 56px var(--pad-x) var(--pad-y);
+}
+
+/* --- block: the universal section primitive ------------------- */
+.block { padding: 32px 0; border-bottom: 1px solid var(--rule); }
+.block:last-of-type { border-bottom: none; }
+.block-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  gap: 18px;
+}
+.block-head h2 {
+  font-size: 32px;
+  margin: 0;
+}
+.block-head .dateline {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* --- text utilities every tab can use ------------------------- */
+.kicker {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.muted { color: var(--muted); }
+.quiet { color: var(--ink-soft); }
+.serif { font-family: var(--serif); }
+.sans  { font-family: var(--sans); }
+.mono  { font-family: var(--mono); }
+
+/* --- small primitives ---------------------------------------- */
+.tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.tag.live { background: var(--accent); color: #fff; }
+
+.badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 3px 8px;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.accent-rule {
+  border-left: 2px solid var(--accent);
+  padding-left: 14px;
+}
+
+/* --- shared footer ------------------------------------------- */
+.site-foot {
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 28px var(--pad-x) 40px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  border-top: 1px solid var(--rule);
+}
+
+/* --- responsive ---------------------------------------------- */
+@media (max-width: 880px) {
+  :root { --pad-x: 22px; --pad-y: 60px; }
+  .topbar { padding: 14px var(--pad-x); }
+  .topbar nav { gap: 16px; font-size: 11.5px; }
+  .page { padding-top: 32px; }
+  .block-head { flex-direction: column; align-items: flex-start; gap: 6px; }
+}

@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Thomas M. Blalock</title>
+
+  <link rel="stylesheet" href="/shared/styles.css" />
+  <link rel="stylesheet" href="page.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="/shared/shell.js" defer></script>
+</head>
+<body>
+
+  <header id="site-nav"></header>
+
+  <main class="page">
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+    <section class="proj-hero">
+      <span class="kicker">Projects · 2022 – present</span>
+      <h1>Things I built, in the order they happened.</h1>
+      <p class="lede">
+        Two live companies, three research projects that won awards or briefed
+        the Secretary of the Air Force, and four engineering builds that
+        actually ran. The resume summarizes; this is the long version.
+      </p>
+    </section>
+
+    <!-- =========================================================
+         TABLE OF CONTENTS
+         ========================================================= -->
+    <nav class="proj-toc" aria-label="Projects index">
+      <div class="toc-col">
+        <h4>Ventures</h4>
+        <ol>
+          <li><a href="#asi">Agent Service Index</a></li>
+          <li><a href="#sidequest">Sidequest Local</a></li>
+        </ol>
+      </div>
+      <div class="toc-col">
+        <h4>Research</h4>
+        <ol>
+          <li><a href="#fins">Flexible Input Networks</a></li>
+          <li><a href="#informed-ml">Informed Machine Learning</a></li>
+          <li><a href="#nato-space">NATO Space Deterrence</a></li>
+        </ol>
+      </div>
+      <div class="toc-col">
+        <h4>Engineering</h4>
+        <ol>
+          <li><a href="#malware">Agentic Spear-Phishing Malware</a></li>
+          <li><a href="#bci">EEG Brain–Computer Interface</a></li>
+          <li><a href="#rover">Autonomous Rover</a></li>
+          <li><a href="#face">Facial Recognition Query System</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- =========================================================
+         VENTURES
+         ========================================================= -->
+    <header class="group-head">
+      <h2>Ventures</h2>
+      <span class="group-tag">Currently building</span>
+    </header>
+
+    <!-- ASI -->
+    <article id="asi" class="venture">
+      <header class="venture-head">
+        <h3>Agent Service Index</h3>
+        <span class="v-status"><span class="tag live">Live</span> Founder · May 2026 –</span>
+      </header>
+
+      <p class="venture-tagline">The discovery layer for the agent economy.</p>
+
+      <p class="venture-meta">
+        agentserviceindex.com
+        <span class="sep">·</span> Solo founder
+        <span class="sep">·</span> MCP &amp; x402 on Base
+      </p>
+
+      <div class="entry-prose">
+        <p>
+          AI agents can't really transact yet. Every signup is a captcha, an
+          OAuth dance, a dashboard built for a human with a credit card. ASI
+          is the missing piece: a public registry where agents send a
+          natural-language query (<em>"cloud hosting,"</em> <em>"a subdomain on the
+          open internet,"</em> <em>"a way to pay another agent in USDC"</em>) and get
+          back services they can actually call. Onboarding is one prompt.
+          No keys to rotate, no plans to pick.
+        </p>
+        <p>
+          The registry ships with three first-party services that prove the
+          stack end-to-end — permissionless EC2, instant subdomains via
+          Cloudflare Tunnel, and an x402 payment facilitator that moves USDC
+          on Base. Built on MCP, EIP-3009, and the assumption that within a
+          year the median internet customer will not have hands.
+        </p>
+      </div>
+
+      <ul class="venture-services" aria-label="Live services">
+        <li>
+          <span class="svc-name">cloud-as</span>
+          Permissionless EC2 instance management with free and paid tiers.
+        </li>
+        <li>
+          <span class="svc-name">subdomain &amp; CDN</span>
+          Automated DNS binding and Cloudflare Tunnel provisioning — agents
+          put a site on the open internet without ever touching a console.
+        </li>
+        <li>
+          <span class="svc-name">x402 facilitator</span>
+          USDC transfers on Base, EIP-3009 compliant, v2 of the x402 protocol.
+        </li>
+      </ul>
+
+      <div class="entry-links">
+        <a href="https://agentserviceindex.com" target="_blank" rel="noopener">agentserviceindex.com</a>
+        <a href="/essays/web4/">The long pitch — why this exists (essay)</a>
+      </div>
+    </article>
+
+    <!-- Sidequest -->
+    <article id="sidequest" class="venture">
+      <header class="venture-head">
+        <h3>Sidequest Local</h3>
+        <span class="v-status"><span class="tag live">Live</span> Founder · Dec 2025 –</span>
+      </header>
+
+      <p class="venture-tagline">For when your friends are busy, but you're not.</p>
+
+      <p class="venture-meta">
+        sidequestlocal.com
+        <span class="sep">·</span> Sidequest Local, Inc.
+        <span class="sep">·</span> Charlottesville, VA
+      </p>
+
+      <div class="entry-prose">
+        <p>
+          You have a free afternoon. You text ten group chats. Six don't
+          reply, three are busy, one says <em>"maybe later."</em> You stay home.
+          Sidequest is the app that replaces that whole loop with a feed.
+        </p>
+        <p>
+          It's a mobile social-discovery app for spontaneous local meetups.
+          Open it and you see what small groups of people near you are
+          doing <em>right now</em> — coffee, climbing, board games, a walk to the
+          bookstore — and you tap once to join. Posting a plan takes about
+          thirty seconds. No group-chat coordination, no RSVPs, no
+          calendar invites. The whole product is built around lowering the
+          activation energy of leaving the house.
+        </p>
+        <p>
+          Counterprogramming for an agent-and-feed-dominated internet: ASI is
+          for software that doesn't have hands, Sidequest is for humans who
+          forgot they did.
+        </p>
+      </div>
+
+      <div class="entry-links">
+        <a href="https://sidequestlocal.com" target="_blank" rel="noopener">sidequestlocal.com</a>
+      </div>
+    </article>
+
+    <!-- =========================================================
+         RESEARCH
+         ========================================================= -->
+    <header class="group-head">
+      <h2>Research</h2>
+      <span class="group-tag">Awards · presentations · papers</span>
+    </header>
+
+    <!-- FINs -->
+    <article id="fins" class="entry">
+      <header class="entry-head">
+        <h3>Flexible Input Networks (FINs)</h3>
+        <span class="dateline">Jun 2024 – 2025</span>
+      </header>
+      <p class="entry-meta">
+        Air Force Research Laboratory
+        <span class="sep">·</span> QC Ware Corp.
+        <span class="sep">·</span> USAFA
+        <span class="sep">·</span> Individual researcher
+      </p>
+
+      <div class="entry-prose">
+        <p>
+          The Air Force has a problem called the Airlift Logistics Challenge:
+          a Pickup-and-Delivery instance where the number of aircraft, cargo
+          items, and airfields all change between problem instances, and the
+          policy has to output a variable number of actions at each step. No
+          standard neural architecture handles that gracefully — transformers
+          want fixed input shapes, RNNs want a sequence, GNNs want a stable
+          graph.
+        </p>
+        <p>
+          So I designed Flexible Input Networks: a class of architectures
+          that learn over <em>"sets of sets"</em> of arbitrary cardinality and
+          output variable-length action sets in a single forward pass — no
+          autoregression, no recurrence, no padding tricks. FINs gave the
+          Airlift Challenge its first reinforcement-learning solution. The
+          formalism generalizes beyond logistics to any multi-modal,
+          variable-cardinality problem.
+        </p>
+      </div>
+
+      <div class="entry-award">
+        <span class="award-line"><strong>#1 USAFA Computer Science Research Project</strong> · Summer 2024</span>
+        <span class="award-line">Briefed at <strong>CORONA 2024</strong> — to the Secretary of the Air Force and Chief of Staff of the Air Force.</span>
+      </div>
+
+      <div class="entry-links">
+        <a href="https://github.com/ThomasBlalock/FINs_Airlift_Challenge" target="_blank" rel="noopener">github · FINs_Airlift_Challenge</a>
+      </div>
+    </article>
+
+    <!-- Informed ML -->
+    <article id="informed-ml" class="entry">
+      <header class="entry-head">
+        <h3>Informed Machine Learning</h3>
+        <span class="dateline">May – Aug 2023</span>
+      </header>
+      <p class="entry-meta">
+        NSA Mathematics Research Group
+        <span class="sep">·</span> USAFA
+        <span class="sep">·</span> Team of 4
+      </p>
+
+      <div class="entry-prose">
+        <p>
+          A summer at the NSA's math group, trying to answer: can you make an
+          LLM hallucinate less on technical text by bolting an
+          expert-curated ontology into its encoder, rather than by making it
+          bigger? We built an attention-based autoencoder whose encoder was
+          fused with a domain knowledge base, then evaluated it on semantic
+          extraction over scientifically nuanced documents.
+        </p>
+        <p>
+          The informed model beat the un-informed baseline on extraction
+          quality, evidence that "informed" architectures may scale accuracy
+          more sample-efficiently than the raw-parameter-count playbook.
+          Most of the project was the bridge between symbolic knowledge and
+          attention layers — figuring out where the ontology gets to live
+          inside a transformer without breaking pretraining.
+        </p>
+      </div>
+
+      <div class="entry-award">
+        <span class="award-line"><strong>#1 USAFA Junior Engineering Research Project</strong> · Summer 2023 (CSRP, Engineering Division)</span>
+        <span class="award-line">Briefed to the <strong>Director of the NSA</strong>; presented at <strong>CORONA 2023</strong> to the Secretary of the Air Force and Chief of Staff of the Air Force.</span>
+      </div>
+
+      <figure class="entry-figure">
+        <img src="/images/B.JPG" alt="Thomas giving a research talk." loading="lazy" />
+        <figcaption>Presenting research, 2023.</figcaption>
+      </figure>
+    </article>
+
+    <!-- NATO Space -->
+    <article id="nato-space" class="entry">
+      <header class="entry-head">
+        <h3>NATO Alliance Space Deterrence</h3>
+        <span class="dateline">Aug 2022 – May 2023</span>
+      </header>
+      <p class="entry-meta">
+        USAFA
+        <span class="sep">·</span> NATO Science &amp; Technology Organization
+        <span class="sep">·</span> Led team of 29
+      </p>
+
+      <div class="entry-prose">
+        <p>
+          Russia destroyed a satellite with a kinetic ASAT in late 2021 and
+          left a debris field that's still in orbit. NATO commissioned a
+          deterrence framework spanning the diplomatic, informational,
+          military, and economic instruments of power. I led the 29-cadet
+          research team that built it.
+        </p>
+        <p>
+          The output was a set of policy frameworks for national and
+          alliance authorities — how the alliance should signal, escalate,
+          and respond to attacks in a domain where attribution is hard,
+          collateral damage is permanent, and there are no rules of the
+          road. Less a paper and more an attempt to write the first draft
+          of a body of doctrine that doesn't yet exist.
+        </p>
+        <p>
+          Briefed at NATO's <strong>inaugural space-deterrence wargame in
+          Paris</strong>, with thirteen member nations represented.
+        </p>
+      </div>
+
+      <div class="entry-award">
+        <span class="award-line">Presented at NATO's inaugural space deterrence wargame · Paris, France · 13 nations</span>
+        <span class="award-line">Western Regional Honors Conference 2023 · USSPACECOM Space Law Conference 2023</span>
+      </div>
+
+      <figure class="entry-figure">
+        <img src="/images/20220607_Steve-Boxall_COS_ZG632_Space-Force_0431.jpg" alt="Cadets aboard a Zero-G parabolic flight during space-program training." loading="lazy" />
+        <figcaption>Parabolic flight training, USAFA Space Operations, 2022.</figcaption>
+      </figure>
+
+      <div class="entry-links">
+        <a href="https://www.youtube.com/watch?v=XWKQtF9r9Ok" target="_blank" rel="noopener">media · talk video</a>
+      </div>
+    </article>
+
+    <!-- =========================================================
+         ENGINEERING
+         ========================================================= -->
+    <header class="group-head">
+      <h2>Engineering</h2>
+      <span class="group-tag">Things I built that ran</span>
+    </header>
+
+    <!-- Malware -->
+    <article id="malware" class="entry">
+      <header class="entry-head">
+        <h3>I built malware that phishes your friends</h3>
+        <span class="dateline">Aug 2024 – May 2025</span>
+      </header>
+      <p class="entry-meta">
+        USAFA Center for Cyberspace Research
+        <span class="sep">·</span> Team of 3
+        <span class="sep">·</span> Proof of concept
+      </p>
+
+      <div class="entry-prose">
+        <p>
+          Listed in the academic catalog as <em>"Automated Conversational
+          Hijacking."</em> What it actually is: agentic malware that gets into
+          your email account, reads your existing threads, and replies
+          inside those threads with spear-phishing messages that sound like
+          you wrote them. Same writing voice, same inside jokes, threading
+          into a real conversation already in your inbox — so the target
+          opens it.
+        </p>
+        <p>
+          The point wasn't to ship an attack. The point was to show what the
+          social-engineering threat surface looks like the moment LLMs
+          become competent at reading context and writing convincingly.
+          The result is uncomfortably good. The defensive posture most
+          organizations have today — <em>"users will spot phishing if it
+          sounds off"</em> — is now a bet against a model that has read your
+          last six months of email.
+        </p>
+      </div>
+
+      <figure class="entry-figure">
+        <img src="/images/IMG_7440.jpg" alt="Cyber research award." loading="lazy" />
+        <figcaption>USAFA Center for Cyberspace Research.</figcaption>
+      </figure>
+    </article>
+
+    <!-- BCI -->
+    <article id="bci" class="entry">
+      <header class="entry-head">
+        <h3>EEG Brain–Computer Interface (P300 Speller)</h3>
+        <span class="dateline">Aug 2023 – Feb 2024</span>
+      </header>
+      <p class="entry-meta">
+        USAFA Center for Cyberspace Research
+        <span class="sep">·</span> Individual
+        <span class="sep">·</span> Full stack: hardware → classifier
+      </p>
+
+      <div class="entry-prose">
+        <p>
+          A P300 speller is a system that lets you type by thinking. Letters
+          flash on a grid; when the one you're attending to flashes, your
+          brain produces a measurable spike about 300ms later. A good
+          classifier turns those spikes into characters.
+        </p>
+        <p>
+          I built the whole pipeline end-to-end — the EEG helmet hardware,
+          the flashing stimulus GUI, the data collection harness, and a
+          recurrent CNN classifier that translates raw scalp voltages into
+          typed text. The primary use case is communication for people with
+          ALS or other severe motor disabilities, who have intact cognition
+          but no reliable way to output language. Soldering up the helmet
+          taught me more about signal noise than any class did.
+        </p>
+      </div>
+
+      <figure class="entry-figure">
+        <img src="/images/IMG_20230920_223752747_HDR.jpg" alt="Custom EEG headset in the lab." loading="lazy" />
+        <figcaption>The EEG helmet, mid-build.</figcaption>
+      </figure>
+
+      <div class="entry-links">
+        <a href="https://github.com/ThomasBlalock/P300_BCI_Speller" target="_blank" rel="noopener">github · P300_BCI_Speller</a>
+      </div>
+    </article>
+
+    <!-- Rover -->
+    <article id="rover" class="entry">
+      <header class="entry-head">
+        <h3>Won a rover race against other cadets</h3>
+        <span class="dateline">Jan – Mar 2024</span>
+      </header>
+      <p class="entry-meta">
+        USAFA Center for Cyberspace Research
+        <span class="sep">·</span> Individual
+        <span class="sep">·</span> Behavioral cloning → actor-critic RL
+      </p>
+
+      <div class="entry-prose">
+        <p>
+          The class assignment: train a vision-only autonomous rover, then
+          race it head-to-head against the other students' rovers on a
+          track none of us had seen. No LIDAR, no GPS, no map — just a
+          camera and whatever policy you could train in time.
+        </p>
+        <p>
+          I started with behavioral cloning from a handful of human-driven
+          laps to get a working baseline, then fine-tuned with an
+          actor-critic RL setup and a lot of reward engineering — penalizing
+          the things that ended runs (clipping cones, oversteer on tight
+          turns) and rewarding clean lines. The RL policy beat the
+          cloning-only baseline by a wide margin and beat the other cadets'
+          rovers on race day. The fun engineering problem turned out to be
+          the reward function, not the architecture.
+        </p>
+      </div>
+
+      <figure class="entry-figure">
+        <video src="/images/rover_video.mp4" autoplay muted loop playsinline aria-label="Autonomous rover navigating the course"></video>
+        <figcaption>Trained policy, autonomous run.</figcaption>
+      </figure>
+
+      <div class="entry-links">
+        <a href="https://github.com/ThomasBlalock/Autonomous_Rover" target="_blank" rel="noopener">github · Autonomous_Rover</a>
+      </div>
+    </article>
+
+    <!-- Facial Recognition -->
+    <article id="face" class="entry">
+      <header class="entry-head">
+        <h3>Facial Recognition Similarity Query</h3>
+        <span class="dateline">Mar – May 2023</span>
+      </header>
+      <p class="entry-meta">
+        USAFA
+        <span class="sep">·</span> Rose-Hulman Institute of Technology
+        <span class="sep">·</span> Team of 4
+        <span class="sep">·</span> Research only
+      </p>
+
+      <div class="entry-prose">
+        <p>
+          Show the system one photo of a person, and it pulls every other
+          photo of that person out of a 40,000+ sports-photo database. The
+          backbone is a CNN transfer-learned from a face-recognition base
+          model and fine-tuned with a triplet loss — so embeddings of the
+          same person cluster together, and different people drift apart.
+          Queries hit a vector database with cosine similarity over the
+          learned embedding space.
+        </p>
+        <p>
+          A nice toy version of a fundamentally serious problem. We kept it
+          inside the lab — useful as a study of embedding quality and
+          triplet-mining strategies, not as something to deploy on actual
+          humans without their consent.
+        </p>
+      </div>
+
+      <div class="entry-links">
+        <a href="https://github.com/ThomasBlalock/Image_Guyver__Facial_Recognition" target="_blank" rel="noopener">github · Image_Guyver</a>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="site-foot">
+    <span>© Thomas&nbsp;M.&nbsp;Blalock · 2nd&nbsp;Lt, US Air Force · Charlottesville, VA</span>
+    <span class="muted">thomasblalock.com</span>
+  </footer>
+
+</body>
+</html>

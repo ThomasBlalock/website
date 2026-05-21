@@ -1,0 +1,13 @@
+<!-- Shared top nav. Injected by /shared/shell.js into <header id="site-nav"></header>.
+     Edit here only. Adding a tab: append a new <a> with the matching data-path
+     and add a route in /nginx.conf. -->
+<div class="topbar">
+  <a class="brand" href="/" aria-label="Thomas M. Blalock — home">Thomas&nbsp;M.&nbsp;Blalock</a>
+  <nav aria-label="Primary">
+    <a href="/"          data-path="/"          data-match="exact">home</a>
+    <a href="/resume/"   data-path="/resume/">resume</a>
+    <a href="/projects/" data-path="/projects/">projects</a>
+    <a href="/essays/"   data-path="/essays/">essays</a>
+    <a href="/contact/"  data-path="/contact/">contact</a>
+  </nav>
+</div>

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thomas M. Blalock</title>
+
+  <!-- Shared design language. Do not duplicate; do not redefine tokens. -->
+  <link rel="stylesheet" href="/shared/styles.css" />
+
+  <!-- Fonts used by /shared/styles.css. Keep this block as-is unless coordinating with a STYLE.md update. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Loads the shared top nav into <header id="site-nav"></header> below. -->
+  <script src="/shared/shell.js" defer></script>
+
+  <link rel="stylesheet" href="page.css" />
+</head>
+<body>
+
+  <header id="site-nav"></header>
+
+  <main class="page home">
+
+    <!-- =========================================================
+         1. HERO / LEDE
+         The first thing a visitor reads. Sets the two-venture frame.
+         ========================================================= -->
+    <section class="hero">
+      <p class="kicker">Charlottesville, VA &nbsp;·&nbsp; 2nd Lt, US Air Force &nbsp;·&nbsp; Operations Research</p>
+      <h1 class="hero-headline">
+        Thomas&nbsp;M. Blalock
+      </h1>
+      <p class="lede">
+        I build agent infrastructure and the occasional social app. Right now that&rsquo;s
+        <a href="https://agentserviceindex.com">Agent Service Index</a> &mdash; a discovery
+        and payments layer so AI agents can actually transact &mdash; and
+        <a href="https://sidequestlocal.com">Sidequest Local</a>, a feed of small
+        things people near you are doing this afternoon.
+      </p>
+      <p class="lede quiet serif"><em>
+        Two companies that have approximately nothing to do with each other:
+        one for AI agents, one for humans who want to leave the house.
+      </em></p>
+    </section>
+
+    <!-- =========================================================
+         2. THE TWO VENTURES
+         ASI first (the harder idea), Sidequest second (the contrast).
+         ========================================================= -->
+    <section class="block ventures">
+      <header class="block-head">
+        <h2>What I&rsquo;m building</h2>
+        <span class="dateline">2026 &nbsp;·&nbsp; both live</span>
+      </header>
+
+      <div class="venture-grid">
+
+        <article class="venture">
+          <div class="venture-head">
+            <span class="kicker">01 &nbsp;/&nbsp; Infrastructure</span>
+            <span class="tag live">Live</span>
+          </div>
+          <h3 class="venture-name">
+            <a href="https://agentserviceindex.com">Agent Service Index</a>
+          </h3>
+          <p class="venture-tagline serif">The discovery layer for the agent economy.</p>
+          <p>
+            An open registry where AI agents discover, authenticate to, and pay for
+            services without API keys, signup forms, or human-in-the-loop dashboards.
+            One natural-language endpoint &mdash; agents POST a query like
+            <span class="mono">&ldquo;cloud hosting&rdquo;</span> and get back callable services.
+          </p>
+          <p class="venture-meta">
+            <span class="muted">Live today:</span>
+            permissionless EC2 provisioning,
+            DNS + Cloudflare tunnels for putting an agent on the open internet,
+            and an <span class="mono">x402</span> facilitator for USDC payments on Base.
+          </p>
+          <p class="venture-foot mono">
+            <a href="https://agentserviceindex.com">agentserviceindex.com &rarr;</a>
+          </p>
+        </article>
+
+        <article class="venture">
+          <div class="venture-head">
+            <span class="kicker">02 &nbsp;/&nbsp; Consumer</span>
+            <span class="tag live">Live</span>
+          </div>
+          <h3 class="venture-name">
+            <a href="https://sidequestlocal.com">Sidequest Local</a>
+          </h3>
+          <p class="venture-tagline serif">For when your friends are busy, but you&rsquo;re not.</p>
+          <p>
+            A mobile app for spontaneous local meetups. See what small groups
+            near you are doing right now &mdash; coffee, climbing, board games,
+            whatever &mdash; and join with one tap. Post a plan in thirty seconds.
+            No group&nbsp;chat coordination required.
+          </p>
+          <p class="venture-meta accent-rule">
+            You have a free afternoon. You text ten group chats. Six don&rsquo;t
+            reply, three are busy, one says &ldquo;maybe later.&rdquo; You stay home.
+            Sidequest replaces that loop with a feed.
+          </p>
+          <p class="venture-foot mono">
+            <a href="https://sidequestlocal.com">sidequestlocal.com &rarr;</a>
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. BACKGROUND + NOW + NEXT STEPS
+         Three lines of context, one Now sentence, three pointers out.
+         ========================================================= -->
+    <section class="block context">
+      <header class="block-head">
+        <h2>The short version</h2>
+        <span class="dateline">Background</span>
+      </header>
+
+      <div class="background">
+        <p>
+          Before the startups: four years at the US Air Force Academy studying
+          computer science and data science, and a stint as Operations Research
+          Analyst for the Air Force.
+        </p>
+        <p>
+          The research has wandered &mdash; brain&ndash;computer interfaces,
+          reinforcement learning for military logistics, agentic malware,
+          NATO space deterrence policy. The throughline is building things
+          that aren&rsquo;t obvious yet.
+        </p>
+        <p>
+          Finishing an MS in Data Science at UVA in 2026.
+        </p>
+      </div>
+
+      <div class="now">
+        <span class="kicker">Now &nbsp;·&nbsp; May 2026</span>
+        <p class="serif">
+          Shipping the next ASI services and the first public Sidequest build
+          in Charlottesville.
+        </p>
+      </div>
+
+      <nav class="next-steps" aria-label="Where to go next">
+        <a class="next-step" href="/projects/">
+          <span class="kicker">01</span>
+          <span class="next-step-title">Projects &amp; research &rarr;</span>
+          <span class="muted">EEG, autonomous rovers, FINs, agentic malware.</span>
+        </a>
+        <a class="next-step" href="/essays/">
+          <span class="kicker">02</span>
+          <span class="next-step-title">Essays &rarr;</span>
+          <span class="muted">Thinking out loud about agents and infrastructure.</span>
+        </a>
+        <a class="next-step" href="/contact/">
+          <span class="kicker">03</span>
+          <span class="next-step-title">Get in touch &rarr;</span>
+          <span class="muted">Email, GitHub, LinkedIn.</span>
+        </a>
+      </nav>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">
+    <span>© Thomas&nbsp;M.&nbsp;Blalock · 2nd&nbsp;Lt, US Air Force · Charlottesville, VA</span>
+    <span class="muted">thomasblalock.com</span>
+  </footer>
+
+</body>
+</html>

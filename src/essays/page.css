@@ -1,0 +1,427 @@
+/* ============================================================
+   /essays/ — component CSS
+   --------------------------------------------------------------
+   Two surfaces here:
+     1. The /essays/ list page (.essays-index)  — restrained, sans.
+     2. The /essays/<slug>/ reader page (.essay-page) — narrow column,
+        serif body, treats the column like a printed page.
+   The component CSS deliberately overrides the default `.page`
+   max-width on the reader page; the inherited tokens
+   (--ink, --rule, --accent, --serif, etc.) come from /shared/styles.css.
+   ============================================================ */
+
+
+/* ============================================================
+   List page (/essays/)
+   ============================================================ */
+
+.essays-index .essays-lede {
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  max-width: 50ch;
+  margin: 0 0 32px;
+}
+
+.essay-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 28px;
+}
+
+.essay-entry {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  align-items: baseline;
+  gap: 24px;
+  padding: 18px 0;
+  border-top: 1px solid var(--rule);
+}
+.essay-entry:last-child { border-bottom: 1px solid var(--rule); }
+
+.essay-dateline {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 4px;
+}
+
+.essay-entry-title {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 0 0 6px;
+}
+
+.essay-entry-title a {
+  text-decoration: none;
+  background-image: linear-gradient(var(--rule), var(--rule));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 1px;
+  padding-bottom: 2px;
+}
+.essay-entry-title a:hover {
+  color: var(--accent);
+  background-image: linear-gradient(var(--accent), var(--accent));
+}
+
+.essay-summary {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 60ch;
+  margin: 0;
+}
+
+.essay-entry--empty {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 720px) {
+  .essay-entry { grid-template-columns: 1fr; gap: 6px; }
+  .essay-dateline { padding-top: 0; }
+}
+
+
+/* ============================================================
+   Reader page (/essays/<slug>/)
+   ============================================================ */
+
+/* Override the inherited .page width — the reader page is a printed
+   essay column, not a multi-section block layout. */
+.essay-page {
+  max-width: 760px;            /* ~ container; the prose itself is narrower */
+  padding-top: 48px;
+}
+
+.essay-head {
+  margin: 0 auto 40px;
+  max-width: 65ch;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 28px;
+}
+
+.essay-head .kicker { display: block; margin-bottom: 10px; }
+
+.essay-title {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5.2vw, 56px);
+  font-weight: 900;
+  font-variation-settings: "SOFT" 30, "opsz" 144;
+  letter-spacing: -0.025em;
+  line-height: 1.03;
+  margin: 0 0 18px;
+}
+
+.essay-back {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.essay-back a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.essay-back a:hover { color: var(--accent); }
+
+
+/* --- Prose -------------------------------------------------- */
+
+.essay-prose {
+  max-width: 65ch;
+  margin: 0 auto;
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.essay-prose p {
+  margin: 0 0 1.1em;
+}
+
+.essay-prose h2 {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin: 2.4em 0 0.7em;
+  scroll-margin-top: 80px;
+}
+
+.essay-prose h3 {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 600;
+  margin: 2em 0 0.6em;
+  scroll-margin-top: 80px;
+}
+
+.essay-prose a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--rule);
+}
+.essay-prose a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.essay-prose strong { font-weight: 700; }
+.essay-prose em { font-style: italic; }
+
+.essay-prose ul, .essay-prose ol {
+  padding-left: 1.4em;
+  margin: 0 0 1.1em;
+}
+.essay-prose li { margin: 0 0 0.4em; }
+
+.essay-prose blockquote {
+  margin: 1.4em 0;
+  padding: 0 0 0 18px;
+  border-left: 2px solid var(--accent);
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.essay-prose code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 0 5px;
+  border-radius: 2px;
+}
+
+.essay-prose pre {
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.55;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 16px 18px;
+  overflow-x: auto;
+  margin: 1.4em 0;
+}
+.essay-prose pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.essay-prose hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2.2em auto;
+  width: 30%;
+}
+
+
+/* --- Inline-HTML extensions used in web4.md ---------------- */
+
+/* Abstract block: a paper card at the top of the essay. */
+.essay-prose .abstract {
+  margin: 0 0 36px;
+  padding: 22px 26px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+}
+.essay-prose .abstract .label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.essay-prose .abstract p {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.55;
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+/* Table of contents (already authored in markdown — render as-is). */
+.essay-prose .toc {
+  margin: 0 0 44px;
+  padding: 18px 22px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.essay-prose .toc .toc-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.essay-prose .toc ol {
+  margin: 0;
+  padding-left: 1.4em;
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  columns: 2;
+  column-gap: 32px;
+}
+.essay-prose .toc li { margin: 0; break-inside: avoid; }
+.essay-prose .toc a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  border-bottom: 1px dotted var(--rule);
+}
+.essay-prose .toc a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+@media (max-width: 600px) {
+  .essay-prose .toc ol { columns: 1; }
+}
+
+/* Pull quote: a paragraph promoted to display type. */
+.essay-prose .pullquote {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  border-left: 3px solid var(--accent);
+  margin: 1.8em 0;
+  padding: 4px 0 4px 22px;
+  max-width: 56ch;
+}
+
+/* Bootstrap ladder visualization: T1 → T5 rows. */
+.essay-prose .ladder {
+  margin: 1.8em 0;
+  padding: 18px 0 4px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.essay-prose .ladder .row {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr auto;
+  align-items: baseline;
+  gap: 18px;
+  padding: 9px 4px;
+  border-bottom: 1px dashed var(--rule);
+  font-family: var(--sans);
+}
+.essay-prose .ladder .row:last-of-type { border-bottom: none; }
+.essay-prose .ladder .step {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--accent);
+  letter-spacing: -0.01em;
+}
+.essay-prose .ladder .what {
+  font-family: var(--sans);
+  font-size: 16px;
+  color: var(--ink);
+}
+.essay-prose .ladder .cost {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.essay-prose .ladder .row.crossed {
+  background: var(--accent-soft);
+  margin: 0 -8px;
+  padding: 9px 12px;
+  border-bottom: none;
+}
+.essay-prose .ladder .row.crossed .step,
+.essay-prose .ladder .row.crossed .what {
+  color: var(--accent);
+  font-weight: 700;
+}
+.essay-prose .ladder .caption {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  padding: 14px 4px 8px;
+  border-top: 1px solid var(--rule);
+  margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  .essay-prose .ladder .row {
+    grid-template-columns: 2.5rem 1fr;
+    grid-template-rows: auto auto;
+  }
+  .essay-prose .ladder .cost {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+}
+
+/* References section. */
+.essay-prose .refs {
+  margin: 3em 0 0;
+  padding: 24px 0 8px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.essay-prose .refs .refs-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.essay-prose .refs ol {
+  margin: 0 0 1em;
+  padding-left: 1.4em;
+}
+.essay-prose .refs li { margin: 0 0 0.4em; }
+
+/* BibTeX citation block. */
+.essay-prose .cite-block {
+  display: block;
+  white-space: pre;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--muted);
+  padding: 14px 16px;
+  margin: 16px 0 0;
+  overflow-x: auto;
+}
+
+/* Footnotes (in case future essays use [^1]). */
+.essay-prose .footnote {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.essay-prose .footnote ol { padding-left: 1.4em; }
+.essay-prose sup a {
+  text-decoration: none;
+  color: var(--accent);
+}

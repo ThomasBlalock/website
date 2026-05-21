@@ -1,0 +1,11 @@
+services:
+  site:
+    image: nginx:alpine
+    container_name: thomasblalock-site
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/srv/site:ro
+      - ./images:/srv/images:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    restart: unless-stopped

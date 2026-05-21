@@ -1,0 +1,307 @@
+/* ============================================================
+   /projects/ — component-scoped CSS
+   --------------------------------------------------------------
+   Inherits tokens and primitives from /shared/styles.css.
+   Adds: the projects hero, the in-page TOC, per-entry layout,
+   the link strip, and the venture spotlight cards.
+   ============================================================ */
+
+/* ---- hero -------------------------------------------------- */
+.proj-hero {
+  padding: 8px 0 36px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 16px;
+}
+.proj-hero .kicker { display: block; margin-bottom: 14px; }
+.proj-hero h1 {
+  font-size: clamp(48px, 7vw, 92px);
+  line-height: 0.94;
+  letter-spacing: -0.035em;
+  margin: 0 0 22px;
+  max-width: 14ch;
+}
+.proj-hero .lede {
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.45;
+  max-width: 56ch;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* ---- table of contents ------------------------------------- */
+.proj-toc {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  padding: 28px 0 36px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 24px;
+}
+.proj-toc .toc-col h4 {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+.proj-toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.proj-toc ol li { margin: 4px 0; }
+.proj-toc ol a {
+  text-decoration: none;
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: color 0.12s ease, border-color 0.12s ease;
+}
+.proj-toc ol a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ---- group heading ----------------------------------------- */
+.group-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 32px 0 14px;
+  gap: 18px;
+}
+.group-head h2 {
+  font-size: 40px;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+.group-head .group-tag {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---- entry block (used by all 9) --------------------------- */
+.entry {
+  padding: 32px 0 40px;
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 84px; /* offset for sticky nav on anchor jump */
+}
+.entry:last-of-type { border-bottom: none; }
+
+.entry-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px 24px;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+.entry-head h3 {
+  font-size: 28px;
+  margin: 0;
+  letter-spacing: -0.018em;
+}
+.entry-head .dateline {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.entry-meta {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin: 0 0 18px;
+  letter-spacing: 0.02em;
+}
+.entry-meta .sep {
+  color: var(--rule);
+  margin: 0 8px;
+}
+
+.entry-prose {
+  font-family: var(--serif);
+  font-size: 17.5px;
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: 64ch;
+}
+.entry-prose p { margin: 0 0 12px; }
+.entry-prose p:last-child { margin-bottom: 0; }
+
+/* ---- award / venue callout --------------------------------- */
+.entry-award {
+  margin: 18px 0 0;
+  padding: 10px 0 10px 14px;
+  border-left: 2px solid var(--accent);
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+.entry-award strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+.entry-award .award-line {
+  display: block;
+  margin: 2px 0;
+}
+
+/* ---- link strip -------------------------------------------- */
+.entry-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  margin-top: 18px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: 0.03em;
+}
+.entry-links a {
+  text-decoration: none;
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2px;
+}
+.entry-links a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.entry-links a::before {
+  content: "→ ";
+  color: var(--muted);
+  margin-right: 2px;
+}
+.entry-links a:hover::before { color: var(--accent); }
+
+/* ---- the venture spotlights -------------------------------- */
+.venture {
+  padding: 40px 0 48px;
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 84px;
+}
+.venture-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px 24px;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+.venture-head h3 {
+  font-size: 38px;
+  margin: 0;
+  letter-spacing: -0.022em;
+}
+.venture-head .v-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.venture-tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 21px;
+  line-height: 1.35;
+  color: var(--accent);
+  max-width: 52ch;
+  margin: 0 0 18px;
+}
+.venture-meta {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin: 0 0 22px;
+  letter-spacing: 0.02em;
+}
+.venture .entry-prose { font-size: 18px; max-width: 64ch; }
+
+.venture-services {
+  margin: 22px 0 4px;
+  padding: 0;
+  list-style: none;
+  font-family: var(--sans);
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink);
+  max-width: 64ch;
+}
+.venture-services li {
+  padding: 10px 0 10px 18px;
+  border-top: 1px solid var(--rule);
+  position: relative;
+}
+.venture-services li:last-child { border-bottom: 1px solid var(--rule); }
+.venture-services li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18px;
+  width: 8px;
+  height: 1px;
+  background: var(--accent);
+}
+.venture-services .svc-name {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-right: 10px;
+}
+
+/* ---- inline image (used very sparingly) -------------------- */
+.entry-figure {
+  margin: 22px 0 4px;
+  max-width: 520px;
+}
+.entry-figure img,
+.entry-figure video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--rule);
+}
+.entry-figure figcaption {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* ---- responsive -------------------------------------------- */
+@media (max-width: 880px) {
+  .proj-hero { padding: 0 0 28px; }
+  .proj-toc {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .entry-head,
+  .venture-head {
+    grid-template-columns: 1fr;
+  }
+  .entry-head .dateline,
+  .venture-head .v-status {
+    margin-top: 4px;
+  }
+  .group-head h2 { font-size: 32px; }
+  .venture-head h3 { font-size: 30px; }
+  .entry-head h3 { font-size: 24px; }
+}

@@ -1,0 +1,379 @@
+/* ============================================================
+   resume — component-scoped styles
+   Inherits all tokens and primitives from /shared/styles.css.
+   ============================================================ */
+
+/* --- header ---------------------------------------------------- */
+.resume-head {
+  padding: 8px 0 28px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 8px;
+}
+.resume-head h1 {
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  margin: 0 0 14px;
+  font-weight: 900;
+}
+.resume-head .role-line {
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  max-width: 60ch;
+  margin: 0 0 18px;
+}
+.resume-head .role-line .accent { color: var(--accent); }
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+.contact-row a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+}
+.contact-row a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.contact-row .sep { color: var(--muted); }
+
+/* --- the "Now" callout ---------------------------------------- */
+.now-line {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 18px 0 6px;
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.now-line .now-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--accent);
+  padding: 4px 9px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  transform: translateY(-2px);
+}
+.now-line p { margin: 0; }
+
+/* --- entry grid: date column + content column ----------------- */
+.entry-grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 14px 28px;
+}
+.entry {
+  display: contents;
+}
+.entry .when {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 6px;
+}
+.entry .what {
+  padding-bottom: 18px;
+  border-bottom: 1px dashed var(--rule);
+}
+.entry:last-child .what { border-bottom: none; padding-bottom: 0; }
+
+.entry h3 {
+  font-size: 19px;
+  margin: 0 0 4px;
+  font-weight: 600;
+}
+.entry h3 .role-sep {
+  color: var(--muted);
+  font-weight: 400;
+  font-family: var(--sans);
+  font-size: 14px;
+  letter-spacing: 0;
+}
+.entry .org {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+}
+.entry .org .dot { color: var(--muted); margin: 0 6px; }
+.entry .org a { color: var(--ink-soft); }
+
+.entry ul {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.entry ul li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 4px;
+}
+.entry ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 1px;
+  background: var(--muted);
+}
+.entry ul li:last-child { margin-bottom: 0; }
+.entry ul a { color: var(--ink-soft); }
+.entry ul a:hover { color: var(--accent); }
+
+.entry .pill-row {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* --- ventures: a bit more prominent --------------------------- */
+.ventures .entry h3 {
+  font-size: 22px;
+}
+.ventures .entry .tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+}
+.ventures .entry .url {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-soft);
+}
+.ventures .entry .url:hover { border-bottom-color: var(--accent); }
+
+/* --- awards two-column on wide screens ------------------------ */
+.awards-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 36px;
+}
+.awards-list .award {
+  padding: 6px 0 12px;
+  border-bottom: 1px dashed var(--rule);
+}
+.awards-list .award:last-child,
+.awards-list .award:nth-last-child(2) { border-bottom: none; }
+.awards-list .award .name {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 2px;
+}
+.awards-list .award .meta {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+.awards-list .award .desc {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* --- leadership compact two-column ---------------------------- */
+.lead-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 36px;
+}
+.lead-list .lead {
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--rule);
+}
+.lead-list .lead:last-child,
+.lead-list .lead:nth-last-child(2) { border-bottom: none; }
+.lead-list .lead .role {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+.lead-list .lead .year {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-left: 6px;
+}
+.lead-list .lead .scope {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.45;
+  margin: 2px 0 0;
+}
+
+/* --- skills tag cloud ----------------------------------------- */
+.skills-group { margin-bottom: 18px; }
+.skills-group:last-child { margin-bottom: 0; }
+.skills-group .label {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+}
+.skill-chips span {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 3px 9px;
+  border-radius: 2px;
+}
+
+/* --- print footnote ------------------------------------------- */
+.pdf-note {
+  margin-top: 6px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+.pdf-note a { color: var(--muted); }
+
+/* --- responsive ----------------------------------------------- */
+@media (max-width: 720px) {
+  .entry-grid { grid-template-columns: 1fr; gap: 4px 0; }
+  .entry .when { padding-top: 0; }
+  .entry .what { padding-bottom: 22px; }
+  .awards-list,
+  .lead-list { grid-template-columns: 1fr; }
+  .now-line { flex-direction: column; gap: 8px; align-items: flex-start; }
+}
+
+/* ============================================================
+   Print stylesheet — US Letter, single column, links black.
+   ============================================================ */
+@media print {
+  @page {
+    size: Letter;
+    margin: 0.5in 0.55in;
+  }
+  :root {
+    --pad-x: 0;
+    --pad-y: 0;
+  }
+  html, body {
+    background: #fff;
+    color: #000;
+    font-size: 10.5pt;
+    line-height: 1.35;
+  }
+  /* hide chrome */
+  .topbar, #site-nav, .site-foot, .pdf-note { display: none !important; }
+
+  .page {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* tighten section rhythm */
+  .block { padding: 10px 0; border-bottom: 1px solid #999; }
+  .block:last-of-type { border-bottom: none; }
+  .block-head { margin-bottom: 10px; }
+  .block-head h2 { font-size: 16pt; }
+  .block-head .dateline { font-size: 8pt; color: #555; }
+
+  /* header */
+  .resume-head { padding: 0 0 8px; margin-bottom: 6px; }
+  .resume-head h1 { font-size: 22pt; margin-bottom: 4px; }
+  .resume-head .role-line { font-size: 10.5pt; margin-bottom: 6px; }
+  .resume-head .role-line .accent { color: #000; }
+  .contact-row { gap: 14px; font-size: 9pt; color: #000; }
+  .contact-row a { color: #000; border-bottom: none; }
+
+  /* now */
+  .now-line {
+    padding: 6px 0;
+    font-size: 10.5pt;
+    page-break-after: avoid;
+  }
+  .now-line .now-tag {
+    background: none;
+    color: #000;
+    border: 1px solid #000;
+    padding: 1px 5px;
+    font-size: 7.5pt;
+  }
+
+  /* entries */
+  .entry-grid {
+    grid-template-columns: 110px 1fr;
+    gap: 8px 18px;
+  }
+  .entry, .award, .lead {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .entry h3 { font-size: 11pt; }
+  .entry h3 .role-sep { font-size: 9pt; }
+  .entry .org { font-size: 9.5pt; }
+  .entry ul { font-size: 9.5pt; }
+  .entry .what { padding-bottom: 8px; border-bottom: none; }
+
+  /* ventures slightly larger */
+  .ventures .entry h3 { font-size: 12pt; }
+  .ventures .entry .tagline { font-size: 10pt; }
+  .ventures .entry .url { color: #000; border-bottom: none; }
+
+  /* awards / leadership */
+  .awards-list, .lead-list { gap: 6px 24px; }
+  .awards-list .award .name,
+  .lead-list .lead .role { font-size: 10pt; }
+  .awards-list .award .desc,
+  .lead-list .lead .scope { font-size: 9pt; }
+  .awards-list .award { padding-bottom: 6px; border-bottom: none; }
+  .lead-list .lead { padding-bottom: 4px; border-bottom: none; }
+
+  /* skills */
+  .skill-chips span {
+    background: none;
+    border: 1px solid #777;
+    color: #000;
+    font-size: 8.5pt;
+  }
+
+  /* all links black */
+  a { color: #000 !important; text-decoration: none !important; }
+}

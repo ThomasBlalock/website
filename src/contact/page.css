@@ -1,0 +1,122 @@
+/* ============================================================
+   contact tab — component-scoped styles
+   Inherits all tokens and primitives from /shared/styles.css.
+   ============================================================ */
+
+/* Hero --------------------------------------------------------- */
+.contact-intro { border-bottom: 1px solid var(--rule); }
+
+.contact-hero {
+  font-size: clamp(48px, 7vw, 92px);
+  line-height: 0.94;
+  letter-spacing: -0.035em;
+  margin: 10px 0 22px;
+}
+
+.lede {
+  font-size: 19px;
+  line-height: 1.45;
+  max-width: 52ch;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Contact rows — generous tap targets, paper feel ------------- */
+.contact-list,
+.contact-ventures {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  grid-template-areas:
+    "label value"
+    "label note";
+  column-gap: 24px;
+  row-gap: 4px;
+  align-items: baseline;
+
+  padding: 22px 24px;
+  min-height: 84px;            /* mobile tap target */
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color 0.12s ease, transform 0.12s ease, background 0.12s ease;
+}
+
+.contact-row:hover,
+.contact-row:focus-visible {
+  border-color: var(--accent);
+  background: #fff;
+  color: var(--ink);
+}
+
+.contact-row:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.contact-label {
+  grid-area: label;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 4px;
+}
+
+.contact-row:hover .contact-label,
+.contact-row:focus-visible .contact-label {
+  color: var(--accent);
+}
+
+.contact-value {
+  grid-area: value;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  word-break: break-word;
+}
+
+.contact-note {
+  grid-area: note;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* Callout ----------------------------------------------------- */
+.contact-callout {
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 60ch;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Responsive -------------------------------------------------- */
+@media (max-width: 640px) {
+  .contact-hero { margin-top: 4px; }
+
+  .contact-row {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "label"
+      "value"
+      "note";
+    padding: 18px 20px;
+    row-gap: 6px;
+    min-height: 96px;
+  }
+
+  .contact-label { padding-top: 0; }
+
+  .contact-value { font-size: 19px; }
+}
