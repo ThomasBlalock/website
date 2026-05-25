@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thomas M. Blalock</title>
+
+  <!-- Shared design language. Do not duplicate; do not redefine tokens. -->
+  <link rel="stylesheet" href="/shared/styles.css" />
+
+  <!-- Fonts used by /shared/styles.css. Keep this block as-is unless coordinating with a STYLE.md update. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Loads the shared top nav into <header id="site-nav"></header> below. -->
+  <script src="/shared/shell.js" defer></script>
+
+  <link rel="stylesheet" href="page.css" />
+</head>
+<body>
+
+  <header id="site-nav"></header>
+
+  <main class="page home">
+
+    <!-- =========================================================
+         1. HERO / LEDE
+         ========================================================= -->
+    <section class="hero">
+      <p class="kicker">Charlottesville, VA &nbsp;·&nbsp; 2nd Lt, US Air Force &nbsp;·&nbsp; Operations Research</p>
+      <h1 class="hero-headline">
+        Thomas&nbsp;M. Blalock
+      </h1>
+      <p class="lede">
+        Hello! I am Thomas Blalock, an Air Force Operation Research Analyst, software developer, and entrepreneur.
+        Here, I present some of my ventures. I hope you find one inspiring.
+      </p>
+    </section>
+
+    <!-- =========================================================
+         2. THE TWO VENTURES
+         ASI first (the harder idea), Sidequest second (the contrast).
+         ========================================================= -->
+    <section class="block ventures">
+      <header class="block-head">
+        <h2>What I&rsquo;m building</h2>
+      </header>
+
+      <div class="venture-grid">
+
+        <article class="venture">
+          <div class="venture-head">
+            <span class="kicker">01 &nbsp;/&nbsp; Infrastructure</span>
+            <span class="tag live">Live</span>
+          </div>
+          <h3 class="venture-name">
+            <a href="https://agentserviceindex.com">Agent Service Index (ASI)</a>
+          </h3>
+          <p class="venture-tagline serif">The discovery layer for the agent economy.</p>
+          <p>
+            A secure search endpoint where AI agents can find, self-register, authenticate, purchase,
+            and use services without any human integration step. Services of this shape enable AI agents to reliably use third
+            party services like cloud hosting, domain routing, advertising agencies, and more without fragile and expensive 
+            computer-use techniques and without tedious manual setups. These services are only useful if they are discoverable
+            through a secure agent-native search service.
+          </p>
+          <p class="venture-foot mono">
+            <a href="https://agentserviceindex.com">agentserviceindex.com &rarr;</a>
+          </p>
+        </article>
+
+        <article class="venture">
+          <div class="venture-head">
+            <span class="kicker">02 &nbsp;/&nbsp; Consumer</span>
+            <span class="tag live">Live</span>
+          </div>
+          <h3 class="venture-name">
+            <a href="https://sidequestlocal.com">Sidequest</a>
+          </h3>
+          <p class="venture-tagline serif">For when your friends are busy, but you&rsquo;re not.</p>
+          <p>
+            A mobile app for spontaneous local meetups. Broadcast a social activity like a board game or pickleball match
+            to your local area and quickly find people to join you. Or, join someone else's activity. Sidequest solves a
+            critical problem in modern society:
+          </p>
+          <p class="venture-meta accent-rule">
+            Spontaneous plans are hard. You text twenty friends, fifteen don't reply in time, four are busy, one says 'maybe later.'
+            All the while, there were people in your town wanting to do the same thing. Sidequest helps you find them.
+          </p>
+          <p class="venture-foot mono">
+            <a href="https://sidequestlocal.com">sidequestlocal.com &rarr;</a>
+            <a href="https://apps.apple.com/us/app/sidequest-social-adventures/id6761319024">App Store &rarr;</a>
+            <a href="https://play.google.com/store/apps/details?id=com.sidequestlocal.app&hl=en_US">Play Store &rarr;</a>
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. BACKGROUND + NOW + NEXT STEPS
+         Three lines of context, one Now sentence, three pointers out.
+         ========================================================= -->
+    <section class="block context">
+      <header class="block-head">
+        <h2>The short version</h2>
+        <span class="dateline">Background</span>
+      </header>
+
+      <div class="background">
+        I seek both depth and breadth, and my story reflects this. <br><br>
+        I recieved my B.S. in computer science and data science from the US Air Force Academy, and will obtain my M.S. 
+        in data science from the University of Virginia 2026. Since then, I've been working as an Air Force Operations
+        Research Analyst.<br><br> 
+
+        Seeking both breadth and depth, I have researched and built projects spanning across multiple
+        fields such as neuroscience, space policy, and agentic malware.<br><br>
+      </div>
+
+      <nav class="next-steps" aria-label="Where to go next">
+        <a class="next-step" href="/projects/">
+          <span class="kicker">01</span>
+          <span class="next-step-title">Projects &amp; research &rarr;</span>
+          <span class="muted">EEG, autonomous rovers, FINs, agentic malware.<br></span>
+        </a>
+        <a class="next-step" href="/essays/">
+          <span class="kicker">02</span>
+          <span class="next-step-title">Essays &rarr;</span>
+          <span class="muted">Thinking out loud about agents and infrastructure.<br></span>
+        </a>
+        <a class="next-step" href="/contact/">
+          <span class="kicker">03</span>
+          <span class="next-step-title">Get in touch &rarr;</span>
+          <span class="muted">Email, GitHub, LinkedIn.</span>
+        </a>
+      </nav>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">
+    <span>© Thomas&nbsp;M.&nbsp;Blalock · 2nd&nbsp;Lt, US Air Force · Charlottesville, VA</span>
+    <span class="muted">thomasblalock.com</span>
+  </footer>
+
+</body>
+</html>

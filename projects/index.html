@@ -25,12 +25,7 @@
          ========================================================= -->
     <section class="proj-hero">
       <span class="kicker">Projects · 2022 – present</span>
-      <h1>Things I built, in the order they happened.</h1>
-      <p class="lede">
-        Two live companies, three research projects that won awards or briefed
-        the Secretary of the Air Force, and four engineering builds that
-        actually ran. The resume summarizes; this is the long version.
-      </p>
+      <h1>Things I built</h1>
     </section>
 
     <!-- =========================================================
@@ -82,8 +77,7 @@
 
       <p class="venture-meta">
         agentserviceindex.com
-        <span class="sep">·</span> Solo founder
-        <span class="sep">·</span> MCP &amp; x402 on Base
+        <span class="sep">·</span> Founder
       </p>
 
       <div class="entry-prose">
@@ -99,8 +93,8 @@
         <p>
           The registry ships with three first-party services that prove the
           stack end-to-end — permissionless EC2, instant subdomains via
-          Cloudflare Tunnel, and an x402 payment facilitator that moves USDC
-          on Base. Built on MCP, EIP-3009, and the assumption that within a
+          Cloudflare Tunnel, and an x402 payment helper that makes funding an agent seamless. 
+          This is built on MCP, EIP-3009, and the assumption that within a
           year the median internet customer will not have hands.
         </p>
       </div>
@@ -123,7 +117,7 @@
 
       <div class="entry-links">
         <a href="https://agentserviceindex.com" target="_blank" rel="noopener">agentserviceindex.com</a>
-        <a href="/essays/web4/">The long pitch — why this exists (essay)</a>
+        <a href="/essays/web4/">Web 4.0 - The long pitch</a>
       </div>
     </article>
 
@@ -144,28 +138,23 @@
 
       <div class="entry-prose">
         <p>
-          You have a free afternoon. You text ten group chats. Six don't
-          reply, three are busy, one says <em>"maybe later."</em> You stay home.
-          Sidequest is the app that replaces that whole loop with a feed.
+          You have a free afternoon. You text twenty friends. Fifteen don't
+          reply, four are busy, one says <em>"maybe later."</em> You stay home.
+          All the while, there were people in your town wanting to do the same thing. 
+          This is the problem that Sidequest solves.
         </p>
         <p>
-          It's a mobile social-discovery app for spontaneous local meetups.
-          Open it and you see what small groups of people near you are
-          doing <em>right now</em> — coffee, climbing, board games, a walk to the
-          bookstore — and you tap once to join. Posting a plan takes about
-          thirty seconds. No group-chat coordination, no RSVPs, no
-          calendar invites. The whole product is built around lowering the
-          activation energy of leaving the house.
-        </p>
-        <p>
-          Counterprogramming for an agent-and-feed-dominated internet: ASI is
-          for software that doesn't have hands, Sidequest is for humans who
-          forgot they did.
+          Sidequest is a social discovery app for spontaneous local meetups featuring a
+          real-time feed of spontaneous small group activities happening in your town.
+          Instead of wasting time and effort texting twenty friends, open Sidequest to 
+          effortlesly find an activity to join or post your own.
         </p>
       </div>
 
       <div class="entry-links">
         <a href="https://sidequestlocal.com" target="_blank" rel="noopener">sidequestlocal.com</a>
+        <a href="https://apps.apple.com/us/app/sidequest-social-adventures/id6761319024">App Store &rarr;</a>
+        <a href="https://play.google.com/store/apps/details?id=com.sidequestlocal.app&hl=en_US">Play Store &rarr;</a>
       </div>
     </article>
 
@@ -194,18 +183,15 @@
         <p>
           The Air Force has a problem called the Airlift Logistics Challenge:
           a Pickup-and-Delivery instance where the number of aircraft, cargo
-          items, and airfields all change between problem instances, and the
-          policy has to output a variable number of actions at each step. No
-          standard neural architecture handles that gracefully — transformers
-          want fixed input shapes, RNNs want a sequence, GNNs want a stable
-          graph.
+          items, and airfields all change between problem instances, and a 
+          policy model has to output a variable number of actions at each step. No
+          standard neural architecture handles reasoning across each modality elegantly.
         </p>
         <p>
           So I designed Flexible Input Networks: a class of architectures
           that learn over <em>"sets of sets"</em> of arbitrary cardinality and
-          output variable-length action sets in a single forward pass — no
-          autoregression, no recurrence, no padding tricks. FINs gave the
-          Airlift Challenge its first reinforcement-learning solution. The
+          output variable-length action sets in a single forward pass. This architecture requires no
+          autoregression, no recurrence, and no padding tricks. The
           formalism generalizes beyond logistics to any multi-modal,
           variable-cardinality problem.
         </p>
@@ -213,7 +199,7 @@
 
       <div class="entry-award">
         <span class="award-line"><strong>#1 USAFA Computer Science Research Project</strong> · Summer 2024</span>
-        <span class="award-line">Briefed at <strong>CORONA 2024</strong> — to the Secretary of the Air Force and Chief of Staff of the Air Force.</span>
+        <span class="award-line">Briefed at <strong>CORONA 2024</strong> to the Secretary of the Air Force and Chief of Staff of the Air Force.</span>
       </div>
 
       <div class="entry-links">
@@ -242,24 +228,16 @@
           fused with a domain knowledge base, then evaluated it on semantic
           extraction over scientifically nuanced documents.
         </p>
-        <p>
-          The informed model beat the un-informed baseline on extraction
-          quality, evidence that "informed" architectures may scale accuracy
-          more sample-efficiently than the raw-parameter-count playbook.
-          Most of the project was the bridge between symbolic knowledge and
-          attention layers — figuring out where the ontology gets to live
-          inside a transformer without breaking pretraining.
-        </p>
       </div>
 
       <div class="entry-award">
         <span class="award-line"><strong>#1 USAFA Junior Engineering Research Project</strong> · Summer 2023 (CSRP, Engineering Division)</span>
-        <span class="award-line">Briefed to the <strong>Director of the NSA</strong>; presented at <strong>CORONA 2023</strong> to the Secretary of the Air Force and Chief of Staff of the Air Force.</span>
+        <span class="award-line">Briefed to the <strong>Director of the NSA</strong>; presented at <strong>CORONA 2023</strong> to the Secretary of Defense.</span>
       </div>
 
       <figure class="entry-figure">
         <img src="/images/B.JPG" alt="Thomas giving a research talk." loading="lazy" />
-        <figcaption>Presenting research, 2023.</figcaption>
+        <figcaption>Recieving an award, 2023.</figcaption>
       </figure>
     </article>
 
@@ -278,28 +256,21 @@
       <div class="entry-prose">
         <p>
           Russia destroyed a satellite with a kinetic ASAT in late 2021 and
-          left a debris field that's still in orbit. NATO commissioned a
-          deterrence framework spanning the diplomatic, informational,
-          military, and economic instruments of power. I led the 29-cadet
-          research team that built it.
+          left a debris field that's still in orbit. In response, NATO commissioned a
+          series of space deterrence wargames meant to develop a framework spanning the diplomatic, informational,
+          military, and economic instruments of power. I led a 29-cadet
+          research team that helped to construct the inagural wargame.
         </p>
         <p>
           The output was a set of policy frameworks for national and
-          alliance authorities — how the alliance should signal, escalate,
+          alliance authorities detailing how the alliance should signal, escalate,
           and respond to attacks in a domain where attribution is hard,
-          collateral damage is permanent, and there are no rules of the
-          road. Less a paper and more an attempt to write the first draft
-          of a body of doctrine that doesn't yet exist.
-        </p>
-        <p>
-          Briefed at NATO's <strong>inaugural space-deterrence wargame in
-          Paris</strong>, with thirteen member nations represented.
+          collateral damage is quasi-permanent, and there are few established rules.
         </p>
       </div>
 
       <div class="entry-award">
-        <span class="award-line">Presented at NATO's inaugural space deterrence wargame · Paris, France · 13 nations</span>
-        <span class="award-line">Western Regional Honors Conference 2023 · USSPACECOM Space Law Conference 2023</span>
+        <span class="award-line">Western Regional Honors Conference 2023<br>USSPACECOM Space Law Conference 2023</span>
       </div>
 
       <figure class="entry-figure">
@@ -317,7 +288,7 @@
          ========================================================= -->
     <header class="group-head">
       <h2>Engineering</h2>
-      <span class="group-tag">Things I built that ran</span>
+      <span class="group-tag">Things I built</span>
     </header>
 
     <!-- Malware -->
@@ -334,13 +305,13 @@
 
       <div class="entry-prose">
         <p>
-          Listed in the academic catalog as <em>"Automated Conversational
-          Hijacking."</em> What it actually is: agentic malware that gets into
+          This system is agentic malware that gets into
           your email account, reads your existing threads, and replies
           inside those threads with spear-phishing messages that sound like
-          you wrote them. Same writing voice, same inside jokes, threading
-          into a real conversation already in your inbox — so the target
-          opens it.
+          you wrote them, threading into a real conversation already in your inbox. 
+          Imagine you ask a friend for help on a project. Our malware responds to you in that 
+          thread from your friend's account with a phishing link that downloads a trojan.
+          The malware replicates and repeats.
         </p>
         <p>
           The point wasn't to ship an attack. The point was to show what the
@@ -379,13 +350,12 @@
           classifier turns those spikes into characters.
         </p>
         <p>
-          I built the whole pipeline end-to-end — the EEG helmet hardware,
+          I built the whole pipeline end-to-end including the EEG helmet hardware,
           the flashing stimulus GUI, the data collection harness, and a
-          recurrent CNN classifier that translates raw scalp voltages into
+          recurrent CNN classifier that translates raw voltages into
           typed text. The primary use case is communication for people with
           ALS or other severe motor disabilities, who have intact cognition
-          but no reliable way to output language. Soldering up the helmet
-          taught me more about signal noise than any class did.
+          but no reliable way to output language.
         </p>
       </div>
 
@@ -415,24 +385,18 @@
         <p>
           The class assignment: train a vision-only autonomous rover, then
           race it head-to-head against the other students' rovers on a
-          track none of us had seen. No LIDAR, no GPS, no map — just a
-          camera and whatever policy you could train in time.
+          track none of us had seen using only a camera.
         </p>
         <p>
           I started with behavioral cloning from a handful of human-driven
-          laps to get a working baseline, then fine-tuned with an
-          actor-critic RL setup and a lot of reward engineering — penalizing
-          the things that ended runs (clipping cones, oversteer on tight
-          turns) and rewarding clean lines. The RL policy beat the
-          cloning-only baseline by a wide margin and beat the other cadets'
-          rovers on race day. The fun engineering problem turned out to be
-          the reward function, not the architecture.
+          laps to get a working baseline, then fine-tuned with RL, rewarding faster completion of subsections
+          and punishing off-track behavior.
         </p>
       </div>
 
       <figure class="entry-figure">
         <video src="/images/rover_video.mp4" autoplay muted loop playsinline aria-label="Autonomous rover navigating the course"></video>
-        <figcaption>Trained policy, autonomous run.</figcaption>
+        <figcaption>Trained policy (behavioral cloning), autonomous run.</figcaption>
       </figure>
 
       <div class="entry-links">
@@ -458,16 +422,10 @@
           Show the system one photo of a person, and it pulls every other
           photo of that person out of a 40,000+ sports-photo database. The
           backbone is a CNN transfer-learned from a face-recognition base
-          model and fine-tuned with a triplet loss — so embeddings of the
+          model and fine-tuned with a triplet loss so that embeddings of the
           same person cluster together, and different people drift apart.
           Queries hit a vector database with cosine similarity over the
           learned embedding space.
-        </p>
-        <p>
-          A nice toy version of a fundamentally serious problem. We kept it
-          inside the lab — useful as a study of embedding quality and
-          triplet-mining strategies, not as something to deploy on actual
-          humans without their consent.
         </p>
       </div>
 
