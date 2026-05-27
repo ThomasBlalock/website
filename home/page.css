@@ -125,9 +125,6 @@
 
 /* --- 3. context: background + now + next steps ----------------- */
 .home .background {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
   margin-bottom: 40px;
 }
 
@@ -211,7 +208,6 @@
     gap: 40px;
   }
 
-  .home .background { grid-template-columns: 1fr; gap: 18px; }
   .home .background p { padding-top: 12px; }
 
   .home .next-steps { grid-template-columns: 1fr; }
