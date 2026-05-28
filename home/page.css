@@ -168,7 +168,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 24px 22px 24px 0;
+  padding: 24px 22px;
   text-decoration: none;
   color: var(--ink);
   border-right: 1px solid var(--rule);
@@ -177,7 +177,6 @@
 
 .home .next-step:last-child { border-right: none; }
 
-.home .next-step + .next-step { padding-left: 22px; }
 
 .home .next-step:hover { background: var(--paper); }
 
