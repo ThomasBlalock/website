@@ -15,11 +15,11 @@
     "current_status": [
       "US Air Force Operations Research Analyst",
       "US Air Force 2nd Lieutenant",
-      "MS Data Science candidate at the University of Virginia (graduating 2026)",
+      "MS in Data Science from the University of Virginia (2026)",
       "Founder of Agent Service Index",
       "Founder of Sidequest Local"
     ],
-    "short_bio": "Thomas is an Air Force Operations Research Analyst and the founder of Agent Service Index (infrastructure for the agent economy) and Sidequest Local (a social app for spontaneous local meetups). He graduated #1 in the Computer Science department at the US Air Force Academy and is finishing an MS in Data Science at UVA. His research has spanned brain-computer interfaces, reinforcement learning for military logistics, agentic malware, and NATO space deterrence policy.",
+    "short_bio": "Thomas is an Air Force Operations Research Analyst and the founder of Agent Service Index (infrastructure for the agent economy) and Sidequest Local (a social app for spontaneous local meetups). He graduated #1 in the Computer Science department at the US Air Force Academy and holds an MS in Data Science from UVA. His research has spanned brain-computer interfaces, reinforcement learning for military logistics, agentic malware, and NATO space deterrence policy.",
     "long_bio": "Thomas grew up doing concurrent college enrollment in high school, spent a year at New Mexico Military Institute as valedictorian, then four years at the US Air Force Academy double-majoring in Computer Science and Data Science. He graduated in 2025 with a 3.967 GPA (#9 of 938), perfect 4.0s in both his majors, and the Outstanding Cadet in Computer Science award (#1 of 39 CS majors in the class). Along the way he commanded a 110-cadet squadron, led a 29-person NATO space policy research team, and won the #1 USAFA engineering research project award twice — once as a junior for an ontology-informed NLP model built with the NSA, and once again the next summer for Flexible Input Networks, a formalization of a class of neural architectures he designed at QC Ware for an Air Force Research Lab logistics problem. He is now an Operations Research Analyst in the Air Force, completing an MS in Data Science at UVA, and building startups on the side."
   },
 
@@ -186,7 +186,7 @@
       "name": "Outstanding Cadet in Computer Science",
       "year": "2025",
       "issuer": "USAF Academy Department of Computer Science",
-      "description": "Awarded to the #1 computer science student in the graduating class of 2025 as determined wholistically rather than just by GPA."
+      "description": "Awarded to the #1 computer science student in the graduating class of 2025 as determined holistically rather than just by GPA."
     },
     {
       "name": "National Reconnaissance Office Advanced Academic Degree (Top 3)",
@@ -210,7 +210,7 @@
       "name": "Wing Fourth Class Cadet Competition Award",
       "year": "2021 (Fall semester)",
       "issuer": "United States Air Force Academy",
-      "description": "#1 USAFA freshman out of 1,078 selected wholistically by USAFA leadership for leadership aptitude, initiative, performance, and embodiment of USAFA ideals."
+      "description": "#1 USAFA freshman out of 1,078 selected holistically by USAFA leadership for leadership aptitude, initiative, performance, and embodiment of USAFA ideals."
     },
     {
       "name": "Group 2 Cadet of the Month",

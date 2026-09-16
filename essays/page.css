@@ -34,28 +34,35 @@
 
 .essay-entry {
   display: grid;
-  grid-template-columns: 9rem 1fr;
+  grid-template-columns: 9rem minmax(0, 1fr);
   align-items: baseline;
   gap: 24px;
-  padding: 18px 0;
+  padding: 20px 0;
   border-top: 1px solid var(--rule);
 }
 .essay-entry:last-child { border-bottom: 1px solid var(--rule); }
 
 .essay-dateline {
+  grid-column: 1;
+  grid-row: 1;
   font-family: var(--mono);
-  font-size: 11.5px;
-  letter-spacing: 0.08em;
+  font-size: 11px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
-  padding-top: 4px;
+  padding-top: 5px;
 }
 
 .essay-entry-title {
-  font-family: var(--serif);
+  /* Pinned explicitly: sparse auto-placement would drop the summary into
+     the narrow date column on row 2. */
+  grid-column: 2;
+  grid-row: 1;
+  font-family: var(--display);
+  font-stretch: 112%;
   font-size: 24px;
   font-weight: 600;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.022em;
   margin: 0 0 6px;
 }
 
@@ -73,6 +80,8 @@
 }
 
 .essay-summary {
+  grid-column: 2;
+  grid-row: 2;
   font-family: var(--serif);
   font-size: 17px;
   line-height: 1.5;
@@ -82,12 +91,15 @@
 }
 
 .essay-entry--empty {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
 }
+.essay-entry--empty > * { grid-column: 1; }
 
 @media (max-width: 720px) {
-  .essay-entry { grid-template-columns: 1fr; gap: 6px; }
-  .essay-dateline { padding-top: 0; }
+  .essay-entry { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .essay-dateline { grid-column: 1; grid-row: 1; padding-top: 0; }
+  .essay-entry-title { grid-column: 1; grid-row: 2; }
+  .essay-summary { grid-column: 1; grid-row: 3; }
 }
 
 
@@ -99,7 +111,7 @@
    essay column, not a multi-section block layout. */
 .essay-page {
   max-width: 760px;            /* ~ container; the prose itself is narrower */
-  padding-top: 48px;
+  padding-top: 44px;
 }
 
 .essay-head {
@@ -112,12 +124,12 @@
 .essay-head .kicker { display: block; margin-bottom: 10px; }
 
 .essay-title {
-  font-family: var(--serif);
-  font-size: clamp(36px, 5.2vw, 56px);
-  font-weight: 900;
-  font-variation-settings: "SOFT" 30, "opsz" 144;
-  letter-spacing: -0.025em;
-  line-height: 1.03;
+  font-family: var(--display);
+  font-size: clamp(32px, 6.4vw, 58px);
+  font-weight: 800;
+  font-stretch: 115%;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
   margin: 0 0 18px;
 }
 
@@ -152,18 +164,21 @@
 }
 
 .essay-prose h2 {
-  font-family: var(--serif);
-  font-size: 28px;
+  font-family: var(--display);
+  font-stretch: 112%;
+  font-size: 27px;
   font-weight: 700;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.025em;
   margin: 2.4em 0 0.7em;
   scroll-margin-top: 80px;
 }
 
 .essay-prose h3 {
-  font-family: var(--serif);
-  font-size: 21px;
+  font-family: var(--display);
+  font-stretch: 112%;
+  font-size: 20px;
   font-weight: 600;
+  letter-spacing: -0.018em;
   margin: 2em 0 0.6em;
   scroll-margin-top: 80px;
 }
@@ -235,10 +250,10 @@
 /* Abstract block: a paper card at the top of the essay. */
 .essay-prose .abstract {
   margin: 0 0 36px;
-  padding: 22px 26px;
+  padding: 22px 24px;
   background: var(--paper);
   border: 1px solid var(--rule);
-  border-left: 3px solid var(--accent);
+  border-left: 2px solid var(--accent);
 }
 .essay-prose .abstract .label {
   font-family: var(--mono);
@@ -294,11 +309,12 @@
 
 /* Pull quote: a paragraph promoted to display type. */
 .essay-prose .pullquote {
-  font-family: var(--serif);
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: -0.015em;
+  font-family: var(--display);
+  font-stretch: 110%;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: -0.028em;
   color: var(--ink);
   border-left: 3px solid var(--accent);
   margin: 1.8em 0;
@@ -324,9 +340,10 @@
 }
 .essay-prose .ladder .row:last-of-type { border-bottom: none; }
 .essay-prose .ladder .step {
-  font-family: var(--serif);
+  font-family: var(--display);
+  font-stretch: 112%;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 19px;
   color: var(--accent);
   letter-spacing: -0.01em;
 }
@@ -424,4 +441,39 @@
 .essay-prose sup a {
   text-decoration: none;
   color: var(--accent);
+}
+
+
+/* ============================================================
+   Reader page — phone
+   ============================================================ */
+@media (max-width: 620px) {
+  .essay-page { padding-top: 26px; }
+
+  .essay-head {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+  }
+  .essay-title { margin-bottom: 14px; }
+
+  .essay-prose { font-size: 17px; line-height: 1.62; }
+  .essay-prose h2 { font-size: 23px; margin: 1.9em 0 0.6em; }
+  .essay-prose h3 { font-size: 18.5px; }
+
+  .essay-prose .abstract { padding: 18px 16px; }
+  .essay-prose .toc { padding: 16px 0; }
+  .essay-prose .pullquote {
+    font-size: 21px;
+    padding-left: 16px;
+  }
+  .essay-prose blockquote { padding-left: 14px; }
+  .essay-prose pre { padding: 14px; font-size: 12px; }
+
+  /* Long URLs and identifiers must never widen the page. */
+  .essay-prose a,
+  .essay-prose code { overflow-wrap: anywhere; }
+
+  .essays-index .essays-lede { font-size: 17.5px; }
+  .essay-entry-title { font-size: 21px; }
+  .essay-summary { font-size: 16px; }
 }

@@ -1,61 +1,69 @@
 /* ============================================================
    contact tab — component-scoped styles
    Inherits all tokens and primitives from /shared/styles.css.
+   Each line out is a panel on the board: label, address, note.
    ============================================================ */
 
 /* Hero --------------------------------------------------------- */
 .contact-intro { border-bottom: 1px solid var(--rule); }
 
+.contact-intro .kicker { display: block; }
+
 .contact-hero {
-  font-size: clamp(48px, 7vw, 92px);
+  font-size: clamp(42px, 10vw, 92px);
+  font-weight: 800;
+  font-stretch: 115%;
   line-height: 0.94;
-  letter-spacing: -0.035em;
-  margin: 10px 0 22px;
+  letter-spacing: -0.04em;
+  margin: 14px 0 20px;
 }
 
-.lede {
+.contact-intro .lede {
+  font-family: var(--serif);
   font-size: 19px;
-  line-height: 1.45;
+  line-height: 1.5;
   max-width: 52ch;
   color: var(--ink-soft);
   margin: 0;
 }
 
-/* Contact rows — generous tap targets, paper feel ------------- */
+/* Contact rows — generous tap targets ------------------------- */
 .contact-list,
 .contact-ventures {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .contact-row {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 110px minmax(0, 1fr);
   grid-template-areas:
     "label value"
     "label note";
-  column-gap: 24px;
+  column-gap: 22px;
   row-gap: 4px;
   align-items: baseline;
 
   padding: 22px 24px;
-  min-height: 84px;            /* mobile tap target */
+  min-height: 86px;            /* mobile tap target */
   background: var(--paper);
   border: 1px solid var(--rule);
-  border-radius: 2px;
+  border-left: 2px solid var(--rule);
+  border-radius: 0;
 
   text-decoration: none;
   color: var(--ink);
-  transition: border-color 0.12s ease, transform 0.12s ease, background 0.12s ease;
+  transition: border-color 0.14s ease, background 0.14s ease;
 }
 
 .contact-row:hover,
 .contact-row:focus-visible {
-  border-color: var(--accent);
-  background: #fff;
+  border-color: var(--rule-soft);
+  border-left-color: var(--accent);
+  background: var(--paper-lift);
   color: var(--ink);
 }
 
@@ -66,11 +74,11 @@
 
 .contact-label {
   grid-area: label;
-  font-size: 11px;
+  font-size: 10.5px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted);
-  padding-top: 4px;
+  padding-top: 5px;
 }
 
 .contact-row:hover .contact-label,
@@ -80,10 +88,12 @@
 
 .contact-value {
   grid-area: value;
-  font-size: 22px;
+  font-family: var(--display);
+  font-stretch: 112%;
+  font-size: 21px;
   font-weight: 600;
-  letter-spacing: -0.01em;
-  word-break: break-word;
+  letter-spacing: -0.018em;
+  overflow-wrap: anywhere;
 }
 
 .contact-note {
@@ -92,31 +102,22 @@
   line-height: 1.45;
 }
 
-/* Callout ----------------------------------------------------- */
-.contact-callout {
-  font-size: 18px;
-  line-height: 1.5;
-  max-width: 60ch;
-  color: var(--ink-soft);
-  margin: 0;
-}
-
 /* Responsive -------------------------------------------------- */
-@media (max-width: 640px) {
-  .contact-hero { margin-top: 4px; }
+@media (max-width: 620px) {
+  .contact-hero { margin-top: 10px; }
 
   .contact-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       "label"
       "value"
       "note";
-    padding: 18px 20px;
+    padding: 18px 16px;
     row-gap: 6px;
-    min-height: 96px;
+    min-height: 0;
   }
 
   .contact-label { padding-top: 0; }
-
-  .contact-value { font-size: 19px; }
+  .contact-value { font-size: 18px; }
+  .contact-intro .lede { font-size: 17.5px; }
 }

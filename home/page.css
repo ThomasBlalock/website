@@ -6,50 +6,68 @@
 
 /* --- 1. hero --------------------------------------------------- */
 .home .hero {
-  padding: 24px 0 48px;
+  padding: 18px 0 44px;
   border-bottom: 1px solid var(--rule);
 }
 
 .home .hero .kicker {
   display: block;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 
 .home .hero-headline {
-  font-size: clamp(48px, 7vw, 92px);
-  line-height: 0.94;
-  letter-spacing: -0.035em;
-  margin: 0 0 28px;
+  font-size: clamp(40px, 10vw, 98px);
+  font-weight: 800;
+  font-stretch: 115%;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  margin: 0 0 26px;
 }
 
 .home .lede {
   font-family: var(--serif);
-  font-size: 19px;
-  line-height: 1.45;
-  max-width: 60ch;
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 58ch;
   margin: 0 0 14px;
 }
 
 .home .lede:last-child { margin-bottom: 0; }
 
-.home .lede.quiet {
-  color: var(--ink-soft);
-  font-size: 17px;
+/* The manifest sits on a hairline shelf under the lede. */
+.home .hero-manifest {
+  margin-top: 32px;
+  padding-top: 22px;
+  border-top: 1px solid var(--rule);
+  max-width: 62ch;
 }
 
 /* --- 2. ventures ---------------------------------------------- */
-.home .ventures { padding-top: 48px; padding-bottom: 48px; }
+.home .ventures { padding-top: 44px; padding-bottom: 44px; }
 
 .home .venture-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 56px;
+  gap: 24px;
 }
 
+/* Each venture is a panel on the board: flat paper, square corners,
+   one hairline. No shadows, no radius. */
 .home .venture {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  padding: 26px 26px 24px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-top: 2px solid var(--accent);
+  transition: background 0.14s ease, border-color 0.14s ease;
+}
+
+.home .venture:hover {
+  background: var(--paper-lift);
+  border-color: var(--rule-soft);
+  border-top-color: var(--accent);
 }
 
 .home .venture-head {
@@ -57,13 +75,15 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 4px;
+  padding-bottom: 14px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid var(--rule-soft);
 }
 
 .home .venture-name {
-  font-size: 28px;
+  font-size: clamp(24px, 3vw, 30px);
   margin: 0;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 .home .venture-name a {
@@ -82,16 +102,18 @@
 }
 
 .home .venture-tagline {
+  font-family: var(--serif);
+  font-style: italic;
   font-size: 19px;
   line-height: 1.4;
-  margin: 0 0 6px;
-  color: var(--ink-soft);
+  margin: 0 0 4px;
+  color: var(--accent);
 }
 
 .home .venture p {
   font-family: var(--serif);
   font-size: 17px;
-  line-height: 1.55;
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -102,12 +124,16 @@
   color: var(--ink-soft);
 }
 
-.home .venture-meta.accent-rule { padding-left: 14px; }
+.home .venture-meta.accent-rule { padding-left: 16px; }
 
-.home .venture-foot {
+.home .venture .venture-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
   margin-top: auto;
-  padding-top: 8px;
-  font-size: 12px;
+  padding-top: 16px;
+  font-family: var(--mono);
+  font-size: 11.5px;
   letter-spacing: 0.06em;
 }
 
@@ -123,98 +149,127 @@
   border-bottom-color: var(--accent);
 }
 
-/* --- 3. context: background + now + next steps ----------------- */
+/* --- 3. context: background + range + next steps --------------- */
 .home .background {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
-.home .background p {
-  font-family: var(--serif);
-  font-size: 17px;
-  line-height: 1.5;
-  margin: 0;
-  padding-top: 14px;
-  border-top: 1px solid var(--rule);
+.home .background .lede {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 62ch;
+  margin: 0 0 14px;
 }
+.home .background .lede:last-child { margin-bottom: 0; }
 
-.home .now {
-  padding: 22px 0 28px;
-  margin-bottom: 36px;
+.home .range {
+  padding: 20px 0 22px;
+  margin-bottom: 34px;
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
-
-.home .now .kicker {
+.home .range .kicker {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   color: var(--accent);
 }
 
-.home .now p {
-  font-size: 20px;
-  line-height: 1.4;
-  margin: 0;
-  max-width: 56ch;
-}
-
+/* Next steps: a dispatch list. Numbered rows, node marker, arrow. */
 .home .next-steps {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
   border-top: 1px solid var(--rule);
 }
 
 .home .next-step {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 24px 22px;
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) auto;
+  align-items: baseline;
+  column-gap: 16px;
+  row-gap: 4px;
+  padding: 20px 8px 20px 4px;
   text-decoration: none;
   color: var(--ink);
-  border-right: 1px solid var(--rule);
-  transition: background 0.12s ease;
+  border-bottom: 1px solid var(--rule);
+  transition: background 0.12s ease, padding-left 0.14s ease;
 }
 
-.home .next-step:last-child { border-right: none; }
+.home .next-step:hover {
+  background: var(--paper);
+  padding-left: 10px;
+}
 
-
-.home .next-step:hover { background: var(--paper); }
-
-.home .next-step .kicker { color: var(--muted); }
+.home .next-step .kicker {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  color: var(--accent);
+  align-self: start;
+  padding-top: 5px;
+}
 
 .home .next-step-title {
-  font-family: var(--serif);
-  font-size: 20px;
+  grid-column: 2;
+  grid-row: 1;
+  font-family: var(--display);
+  font-stretch: 112%;
+  font-size: 21px;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.018em;
 }
 
-.home .next-step:hover .next-step-title { color: var(--accent); }
-
 .home .next-step .muted {
+  grid-column: 2;
+  grid-row: 2;
   font-size: 14px;
   line-height: 1.45;
 }
 
+/* The arrow is the affordance — it slides on hover. */
+.home .next-step::after {
+  content: "→";
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  align-self: center;
+  font-family: var(--mono);
+  font-size: 16px;
+  color: var(--muted);
+  transition: transform 0.14s ease, color 0.12s ease;
+}
+
+.home .next-step:hover::after {
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+.home .next-step:hover .next-step-title { color: var(--accent); }
+
 /* --- responsive ----------------------------------------------- */
 @media (max-width: 880px) {
-  .home .hero { padding: 8px 0 32px; }
-  .home .hero .kicker { margin-bottom: 18px; }
-  .home .hero-headline { margin-bottom: 22px; }
-
   .home .venture-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 20px;
   }
+  .home .ventures { padding-top: 34px; padding-bottom: 34px; }
+}
 
-  .home .background p { padding-top: 12px; }
+@media (max-width: 620px) {
+  .home .hero { padding: 6px 0 30px; }
+  .home .hero .kicker { margin-bottom: 14px; }
+  .home .hero-headline { margin-bottom: 20px; }
 
-  .home .next-steps { grid-template-columns: 1fr; }
+  .home .lede { font-size: 18px; }
+  .home .hero-manifest { margin-top: 24px; padding-top: 18px; }
+
+  .home .venture { padding: 20px 18px 20px; gap: 12px; }
+  .home .venture-tagline { font-size: 17px; }
+  .home .venture p { font-size: 16px; }
+
+  .home .background .lede { font-size: 17px; }
+
   .home .next-step {
-    border-right: none;
-    border-bottom: 1px solid var(--rule);
-    padding: 20px 0;
+    grid-template-columns: 34px minmax(0, 1fr) auto;
+    column-gap: 10px;
+    padding: 16px 2px;
   }
-  .home .next-step + .next-step { padding-left: 0; }
-  .home .next-step:last-child { border-bottom: none; }
+  .home .next-step:hover { padding-left: 2px; }
+  .home .next-step-title { font-size: 19px; }
 }

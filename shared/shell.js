@@ -28,6 +28,9 @@
     const path = a.dataset.path;
     const exact = a.dataset.match === "exact";
     const hit = exact ? (here === path) : here.startsWith(path);
-    if (hit) a.classList.add("active");
+    if (hit) {
+      a.classList.add("active");
+      a.setAttribute("aria-current", "page");
+    }
   }
 })();
