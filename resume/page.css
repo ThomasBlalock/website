@@ -248,18 +248,6 @@
   margin: 3px 0 0;
 }
 
-/* --- the skills note ------------------------------------------ */
-.skills-note {
-  font-family: var(--serif);
-  font-size: 18px;
-  line-height: 1.55;
-  color: var(--ink-soft);
-  max-width: 60ch;
-  margin: 0 0 18px;
-  padding-left: 16px;
-  border-left: 2px solid var(--accent);
-}
-
 /* --- print footnote ------------------------------------------- */
 .pdf-note {
   margin-top: 6px;
@@ -307,7 +295,6 @@
   .resume-head .role-line { font-size: 17px; }
   .now-line { font-size: 17px; }
   .ventures .entry h3 { font-size: 20px; }
-  .skills-note { font-size: 16.5px; }
 }
 
 /* ============================================================
@@ -398,9 +385,6 @@
   .lead-list .lead .scope { font-size: 9pt; }
   .awards-list .award { padding: 5px 0; border-top: none; }
   .lead-list .lead { padding: 4px 0; border-top: none; }
-
-  /* skills note */
-  .skills-note { font-size: 9.5pt; border-left: 1px solid #000; }
 
   /* status pills print as plain text */
   .tag.live { background: none; border: 1px solid #000; color: #000; }
