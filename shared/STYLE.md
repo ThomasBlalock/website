@@ -80,8 +80,6 @@ The site is read on phones. Non-negotiable:
 
 ## Linking out
 
-- ASI: <https://agentserviceindex.com>
-- Sidequest: <https://sidequestlocal.com>
 - Email: <mailto:blalockthomasm@gmail.com>
 - GitHub: <https://github.com/ThomasBlalock>
 - LinkedIn: <https://www.linkedin.com/in/thomas-blalock/>

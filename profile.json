@@ -3,7 +3,7 @@
 
   "site_direction": {
     "primary_audience": "General public / networking — recruiters, founders, collaborators, and curious internet visitors who land here from LinkedIn, X, or word of mouth. Not a job-application portfolio and not an investor deck — a public identity.",
-    "centerpiece": "Current ventures: Agent Service Index and Sidequest Local. The first thing a visitor should understand is what Thomas is building right now. Everything else (research, awards, military background) is supporting evidence that he's qualified to build it.",
+    "centerpiece": "Past ventures: Agent Service Index and Sidequest Local (both discontinued in 2026; describe them in past tense and do not link to their old sites). The first thing a visitor should understand is what Thomas has built. Everything else (research, awards, military background) is supporting evidence that he's qualified to build it.",
     "tone": "Infer from the project information and ask the user. Avoid buzwords. Be content dense. Be organized and concise. Imbue the website with personality in the design of the layout and JS gimicks.",
     "design_direction": "Distinctive — not a generic devfolio template. The agent should feel free to use a strong opinionated visual identity: bold typography, unconventional layout, asymmetry, a memorable color palette. Avoid: gradient hero blobs, glassmorphism cards, generic 3-column 'Featured Projects' grids, AI-generated-looking abstract art. The site should be memorable enough that someone could describe it from memory after one visit.",
   },
@@ -16,10 +16,10 @@
       "US Air Force Operations Research Analyst",
       "US Air Force 2nd Lieutenant",
       "MS in Data Science from the University of Virginia (2026)",
-      "Founder of Agent Service Index",
-      "Founder of Sidequest Local"
+      "Former founder of Agent Service Index (discontinued)",
+      "Former founder of Sidequest Local (discontinued)"
     ],
-    "short_bio": "Thomas is an Air Force Operations Research Analyst and the founder of Agent Service Index (infrastructure for the agent economy) and Sidequest Local (a social app for spontaneous local meetups). He graduated #1 in the Computer Science department at the US Air Force Academy and holds an MS in Data Science from UVA. His research has spanned brain-computer interfaces, reinforcement learning for military logistics, agentic malware, and NATO space deterrence policy.",
+    "short_bio": "Thomas is an Air Force Operations Research Analyst who founded Agent Service Index (infrastructure for the agent economy) and Sidequest Local (a social app for spontaneous local meetups). He graduated #1 in the Computer Science department at the US Air Force Academy and holds an MS in Data Science from UVA. His research has spanned brain-computer interfaces, reinforcement learning for military logistics, agentic malware, and NATO space deterrence policy.",
     "long_bio": "Thomas grew up doing concurrent college enrollment in high school, spent a year at New Mexico Military Institute as valedictorian, then four years at the US Air Force Academy double-majoring in Computer Science and Data Science. He graduated in 2025 with a 3.967 GPA (#9 of 938), perfect 4.0s in both his majors, and the Outstanding Cadet in Computer Science award (#1 of 39 CS majors in the class). Along the way he commanded a 110-cadet squadron, led a 29-person NATO space policy research team, and won the #1 USAFA engineering research project award twice — once as a junior for an ontology-informed NLP model built with the NSA, and once again the next summer for Flexible Input Networks, a formalization of a class of neural architectures he designed at QC Ware for an Air Force Research Lab logistics problem. He is now an Operations Research Analyst in the Air Force, completing an MS in Data Science at UVA, and building startups on the side."
   },
 
@@ -35,10 +35,9 @@
       "name": "Agent Service Index",
       "short_name": "ASI",
       "tagline": "The discovery layer for the agent economy.",
-      "url": "https://agentserviceindex.com",
       "role": "Founder",
       "started": "May 2026",
-      "status": "Live",
+      "status": "Discontinued",
       "elevator_pitch": "An open registry where AI agents discover, authenticate to, and pay for services without API keys, dashboards, or human-in-the-loop signups. One natural-language search endpoint; agents find what they need and use it. Onboarding is a single prompt.",
       "what_it_does": "ASI is a public directory and discovery layer connecting autonomous AI agents to permissionless, agent-friendly services. Agents POST natural-language queries (e.g., 'cloud hosting') and get back callable services — no manual signup required.",
       "live_services": [
@@ -62,10 +61,9 @@
       "name": "Sidequest Local",
       "short_name": "Sidequest",
       "tagline": "For when your friends are busy, but you're not.",
-      "url": "https://sidequestlocal.com",
       "role": "Founder",
       "started": "December 2025",
-      "status": "Live",
+      "status": "Discontinued",
       "elevator_pitch": "A mobile social discovery app for spontaneous local meetups. See what small groups of people near you are doing right now — coffee, climbing, board games, whatever — and join with one tap. Post a plan in 30 seconds. No groupchat coordination required.",
       "what_it_does": "Real-time live feed of small social activities happening near you. Quick post, one-tap join, low-pressure participation.",
       "the_problem": "You have a free afternoon. You text 10 group chats. Six don't reply, three are busy, one says 'maybe later.' You stay home. Sidequest replaces that whole loop with a feed.",
